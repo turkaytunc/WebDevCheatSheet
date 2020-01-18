@@ -12,9 +12,9 @@
 
 ### Formatting
 
-<b>Bold text </b>  
-<i>Italic text</i>  
-<u>underlined text</u>  
+"<b>Bold text </b>"  
+"<i>Italic text</i>"  
+"<u>underlined text</u>"  
 <mark>I am highlighted in yellow</mark>- marks the text in yellow. If other colors are needed, span is used.  
 <span style="background-color: #FF00FF">I am highlighted in pink</span>
 <strong>I am strong</strong> - give emphasis to a particular text; mostly bold  
