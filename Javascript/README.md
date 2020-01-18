@@ -31,25 +31,25 @@ let arr, a, b;
 # js cheat-sheet
 
 ## arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
-	** arr.fill(deger, baslangic, son)**
+	**arr.fill(deger, baslangic, son)**
 ## arraye eleman ekleme ve cikarma
-	** arr.push(deger), arr.pop()**
+	**arr.push(deger), arr.pop()**
 ## array iceriginde bir degeri arama, eleman bulunur ise bulundugu indexi dondurur, bulamaz ise -1 dondurur
-	** arr.indexOf(deger) **
+	**arr.indexOf(deger)**
 ## array elemanlari arasina istenen karakterin eklenmesi
-	** arr.join(",")**
+	**arr.join(",")**
 ## arrayin bir kisminin ayrilmasi
-	** arr.slice(baslangic, bitis)**
+	**arr.slice(baslangic, bitis)**
 ## array elemanlarini siralama
-	** arr.sort(function(a,b){ return a-b;})**
+	**arr.sort(function(a,b){ return a-b;})**
 ## array elemanlarinin siralamasini tersine cevirme
-	** arr.reverse()**
+	**arr.reverse()**
 	
 ## forEach dongusu kullanimi
-	** arr.forEach(function(element, index){console.log(element, index)})**
+	**arr.forEach(function(element, index){console.log(element, index)})**
 	
 ## forEach ile cok boyutlu array kullanimi
-	** arr.forEach(function(row){row.forEach(function(col){console.log(col);});**
+	**arr.forEach(function(row){row.forEach(function(col){console.log(col);});**
 
 
 
