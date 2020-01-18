@@ -31,9 +31,9 @@ let arr, a, b;
 # js cheat-sheet
 
 ## arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
-	**arr.fill(deger, baslangic, son)**
+**arr.fill(deger, baslangic, son)**
 ## arraye eleman ekleme ve cikarma
-	**arr.push(deger), arr.pop()**
+**arr.push(deger), arr.pop()**
 ## array iceriginde bir degeri arama, eleman bulunur ise bulundugu indexi dondurur, bulamaz ise -1 dondurur
 	**arr.indexOf(deger)**
 ## array elemanlari arasina istenen karakterin eklenmesi
