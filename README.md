@@ -1,13 +1,13 @@
-# Ultimate Web Development Cheat Sheet
+# Ultimate Web Development Cheat-sheet
 
 ## HTML
 
-[clickme](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/HTML)
+[HTML Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/HTML)
 
 ## Css/Sass
 
-[clickme](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/CSS/Sass)
+[Css Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/CSS/Sass)
 
 ## Javascript
 
-[clickme](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/Javascript)
+[Javascript Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/Javascript)

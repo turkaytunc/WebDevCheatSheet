@@ -2,15 +2,13 @@
 
 ### Characters
 
-<ul>
-<li><strong>&amp;nbsp; –</strong> space (non-breaking)</li>
-<li><strong>&amp;quot; -</strong> add quotation mark (“)</li>
-<li><strong>&amp;lt; -</strong> less than symbol (&lt;)</li>
-<li><strong>&amp;gt; -</strong> greater than symbol (&gt;)</li>
-<li><strong>&amp;amp; -</strong> the ‘&amp;’ or ampersand symbol</li>
-<li><strong>&amp;copy; -</strong> copyright symbol</li>
-<li><strong>&amp;trade; -</strong> trademark symbol</li>
-</ul>
+&amp;nbsp; – space (non-breaking)  
+&amp;quot; - add quotation mark (“)  
+&amp;lt; - less than symbol (&lt;)  
+&amp;gt; - greater than symbol (&gt;)  
+&amp;amp; - the ‘&amp;’ or ampersand symbol  
+&amp;copy; - copyright symbol  
+&amp;trade; - trademark symbol
 
 ### Formatting
 
