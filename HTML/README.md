@@ -1,6 +1,6 @@
 # HTML cheatsheet
 
-### Characters
+## Characters
 
 &amp;nbsp; – space (non-breaking)  
 &amp;quot; - add quotation mark (“)  
@@ -10,9 +10,8 @@
 &amp;copy; - copyright symbol  
 &amp;trade; - trademark symbol
 
-### Formatting
+## Formatting
 
-<div>
 <ul>
 <li>&lt;b&gt;Bold text &lt;/b&gt;</li>
 <li>&lt;i&gt;<em>Italic text</em>&lt;/i&gt;</li>
@@ -29,4 +28,3 @@
 <li><span>&lt;pre&gt;&lt;/pre&gt;</span> - preformatted text</li>
 <li><span>&lt;tt&gt;&lt;/tt&gt;</span> - typewriter text</li>
 </ul>
-</div>
