@@ -61,8 +61,8 @@
 ### forEach ile cok boyutlu array kullanimi
 
 > arr.forEach(function(row){  
->  row.forEach(function(col){  
->  console.log(col);});
+> row.forEach(function(col){  
+> console.log(col);});
 
 ### Callback function async
 
@@ -74,14 +74,18 @@
 
 ### Belirsiz sayida argunman alan fonksiyon
 
-> let calc = (a, b, ...extra) => {  
-> if (a === undefined || b === undefined) {
-> return "error";
-> }  
-> let sum = a + b;  
-> for (i = 0; i < extra.length; i++) {
-> sum += extra[i];
-> }  
-> return sum;  
-> };  
-> console.log(calc(3, 5, 8, 10, 20));
+<pre>
+<code>
+let calc = (a, b, ...extra) => {  
+if (a === undefined || b === undefined) {
+return "error";
+}  
+let sum = a + b;  
+for (i = 0; i < extra.length; i++) {
+sum += extra[i];
+}  
+return sum;  
+};  
+console.log(calc(3, 5, 8, 10, 20));
+</code>
+</pre>
