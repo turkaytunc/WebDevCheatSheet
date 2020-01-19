@@ -60,10 +60,11 @@
 
 ### forEach ile cok boyutlu array kullanimi
 
-> arr.forEach(function(row){
-
-    row.forEach(function(col){
-        console.log(col);});
+ <pre><code>
+ arr.forEach(function(row){  
+ row.forEach(function(col){
+ console.log(col);});
+ </code></pre>
 
 ### Callback function async
 
