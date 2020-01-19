@@ -64,10 +64,11 @@ arr.forEach(function(element, index){console.log(element, index)})
 
 arr.forEach(function(row){row.forEach(function(col){console.log(col);});
 
-### Callback function
+### Callback function async
 
 let callbackFunc = () => {
 console.log("done");
 };
 
 setTimeout(callbackFunc, 2000); //milisec
+setTimeout(() => console.log("done"), 2000);
