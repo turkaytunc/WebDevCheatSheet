@@ -1,6 +1,8 @@
 # Javascript Cheatsheet
 
-### degiskenlerin degerlerini birbirleri ile degistirme
+## Basit Fonksiyonlar ve islevleri
+
+### Degiskenlerin degerlerini birbirleri ile degistirme
 
 > let a = 8, b = 6;
 > (() => {
@@ -9,48 +11,48 @@
 > console.log(a);  
 > console.log(b);
 
-### bir arrayin ilk iki elemanini alma
+### Bir arrayin ilk iki elemanini alma
 
 > [b, a] = [...arr]  
 > const [a, b] = [1, 2, 3, 4, 5, 6];  
 > console.log(a, b); // 1, 2
 
-### her virgul bir elemani temsil ediyor
+### Her virgul bir elemani temsil ediyor, bu sekilde bir arrayin iceriginin bir kismi baska bir arrraye aktarilabiliyor
 
 > const [a, b,,, c] = [1, 2, 3, 4, 5, 6];  
 > console.log(a, b, c); // 1, 2, 5
 
-### elemanlarin ilk ikisini a ve b degiskenine atanmasi, geri kalan elemanlarin ise arr arrayine doldurulmasi
+### Elemanlarin ilk ikisini a ve b degiskenine atanmasi, geri kalan elemanlarin ise arr arrayine doldurulmasi
 
 > const source = [1,2,3,4,5,6,7,8,9,10];  
 > let arr, a, b;  
 > [a, b, ...arr] = source;
 
-### arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
+### Arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
 
 > arr.fill(deger, baslangic, son)
 
-### arraye eleman ekleme ve cikarma
+### Arraye eleman ekleme ve cikarma
 
 > arr.push(deger), arr.pop()
 
-### array iceriginde bir degeri arama, eleman bulunur ise bulundugu indexi dondurur, bulamaz ise -1 dondurur
+### Array iceriginde bir degeri arama, eleman bulunur ise bulundugu indexi dondurur, bulamaz ise -1 dondurur
 
 > arr.indexOf(deger)
 
-### array elemanlari arasina istenen karakterin eklenmesi
+### Array elemanlari arasina istenen karakterin eklenmesi
 
 > arr.join(",")
 
-### arrayin bir kisminin ayrilmasi
+### Arrayin bir kisminin ayrilmasi
 
 > arr.slice(baslangic, bitis)
 
-### array elemanlarini siralama
+### Array elemanlarini siralama
 
 > arr.sort(function(a,b){ return a-b;})
 
-### array elemanlarinin siralamasini tersine cevirme
+### Array elemanlarinin siralamasini tersine cevirme
 
 > arr.reverse()
 
