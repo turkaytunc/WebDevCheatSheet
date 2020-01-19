@@ -1,29 +1,29 @@
 # Javascript Cheatsheet
 
-### changing values of two variables with eachother
+### degiskenlerin degerlerini birbirleri ile degistirme
 
 > let a = 8, b = 6;
 > (() => {
 > [b, a] = [a, b];
 > })();  
-> console.log(a);
+> console.log(a);  
 > console.log(b);
 
-### slicing first 2 element of an array
+### bir arrayin ilk iki elemanini alma
 
-> [b, a] = [...arr]
+> [b, a] = [...arr]  
 > const [a, b] = [1, 2, 3, 4, 5, 6];  
 > console.log(a, b); // 1, 2
 
-### every comma represents one element
+### her virgul bir elemani temsil ediyor
 
-> const [a, b,,, c] = [1, 2, 3, 4, 5, 6];
+> const [a, b,,, c] = [1, 2, 3, 4, 5, 6];  
 > console.log(a, b, c); // 1, 2, 5
 
-### slicing first 2 element of an array to new variables and rest of them to new array
+### elemanlarin ilk ikisini a ve b degiskenine atanmasi, geri kalan elemanlarin ise arr arrayine doldurulmasi
 
-> const source = [1,2,3,4,5,6,7,8,9,10];
-> let arr, a, b;
+> const source = [1,2,3,4,5,6,7,8,9,10];  
+> let arr, a, b;  
 > [a, b, ...arr] = source;
 
 ### arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
@@ -60,7 +60,10 @@
 
 ### forEach ile cok boyutlu array kullanimi
 
-> arr.forEach(function(row){row.forEach(function(col){console.log(col);});
+> arr.forEach(function(row){
+
+    row.forEach(function(col){
+        console.log(col);});
 
 ### Callback function async
 
