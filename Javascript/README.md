@@ -4,22 +4,22 @@
 
 ### Degiskenlerin degerlerini birbirleri ile degistirme
 
-<pre>
-    <code>
-        let a = 8, b = 6;
-        (() => {
-        [b, a] = [a, b];
-        })();  
-        console.log(a);  
-        console.log(b);
-    </code>
-</pre>
+<pre><code>
+    let a = 8, b = 6;
+    (() => {
+    [b, a] = [a, b];
+    })();  
+    console.log(a);  
+    console.log(b);
+</code></pre>
 
 ### Bir dizinin ilk iki elemanini alma
 
-> [b, a] = [...arr]  
-> const [a, b] = [1, 2, 3, 4, 5, 6];  
-> console.log(a, b); // 1, 2
+<pre><code>
+    [b, a] = [...arr]
+    const [a, b] = [1, 2, 3, 4, 5, 6];  
+    console.log(a, b); // 1, 2
+</code></pre>
 
 ### Her virgul bir elemani temsil ediyor, bu sekilde bir dizinin iceriginin bir kismi baska bir diziye aktarilabiliyor
 
@@ -28,9 +28,11 @@
 
 ### Elemanlarin ilk ikisini a ve b degiskenlerine atanmasi, geri kalan elemanlarin ise arr dizisine doldurulmasi
 
-> const source = [1,2,3,4,5,6,7,8,9,10];  
-> let arr, a, b;  
-> [a, b, ...arr] = source;
+<pre><code>
+    const source = [1,2,3,4,5,6,7,8,9,10];  
+    let arr, a, b;  
+    [a, b, ...arr] = source;
+</code></pre>
 
 ### Arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
 
@@ -66,30 +68,25 @@
 
 ### forEach ile cok boyutlu array kullanimi
 
-<pre>
-    <code>
+<pre><code>
     arr.forEach(function(row){  
         row.forEach(function(col){  
         console.log(col);});
-    </code>
-</pre>
+</code></pre>
 
 ### Asenkron callback fonksiyon kullanimi
 
-<pre>
-    <code>
+<pre><code>
     let callbackFunc = () => {
         console.log("done");
     };
     setTimeout(callbackFunc, 2000); //milisaniye
     setTimeout(() => console.log("done"), 2000);
-    </code>
-</pre>
+</code></pre>
 
 ### Belirsiz sayida parametre alan fonksiyon
 
-<pre>
-    <code>
+<pre><code>
     let calc = (a, b, ...extra) => {
         if (a === undefined || b === undefined) {
             return "error";
@@ -103,5 +100,4 @@
     };
 
     console.log(calc(3, 5, 8, 10, 20));
-    </code>
-</pre>
+</code></pre>
