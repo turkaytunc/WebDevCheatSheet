@@ -70,5 +70,19 @@ let callbackFunc = () => {
 console.log("done");
 };
 
-setTimeout(callbackFunc, 2000); //milisec
+setTimeout(callbackFunc, 2000); //milisec  
 setTimeout(() => console.log("done"), 2000);
+
+### Belirsiz sayida argunman alan fonksiyon
+
+let calc = (a, b, ...extra) => {
+if (a === undefined || b === undefined) {
+return "error";
+}
+let sum = a + b;
+for (i = 0; i < extra.length; i++) {
+sum += extra[i];
+}
+return sum;
+};
+console.log(calc(3, 5, 8, 10, 20));
