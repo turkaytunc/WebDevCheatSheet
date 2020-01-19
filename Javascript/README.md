@@ -60,11 +60,9 @@
 
 ### forEach ile cok boyutlu array kullanimi
 
- <pre><code>
- arr.forEach(function(row){  
- row.forEach(function(col){
- console.log(col);});
- </code></pre>
+> arr.forEach(function(row){  
+>  row.forEach(function(col){  
+>  console.log(col);});
 
 ### Callback function async
 
