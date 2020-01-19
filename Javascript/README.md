@@ -1,6 +1,6 @@
 # Javascript Cheatsheet
 
-## Basit Fonksiyonlar ve islevleri
+## Basit Fonksiyonlar ve notlar
 
 ### Degiskenlerin degerlerini birbirleri ile degistirme
 
@@ -11,18 +11,18 @@
 > console.log(a);  
 > console.log(b);
 
-### Bir arrayin ilk iki elemanini alma
+### Bir dizinin ilk iki elemanini alma
 
 > [b, a] = [...arr]  
 > const [a, b] = [1, 2, 3, 4, 5, 6];  
 > console.log(a, b); // 1, 2
 
-### Her virgul bir elemani temsil ediyor, bu sekilde bir arrayin iceriginin bir kismi baska bir arrraye aktarilabiliyor
+### Her virgul bir elemani temsil ediyor, bu sekilde bir dizinin iceriginin bir kismi baska bir diziye aktarilabiliyor
 
 > const [a, b,,, c] = [1, 2, 3, 4, 5, 6];  
 > console.log(a, b, c); // 1, 2, 5
 
-### Elemanlarin ilk ikisini a ve b degiskenine atanmasi, geri kalan elemanlarin ise arr arrayine doldurulmasi
+### Elemanlarin ilk ikisini a ve b degiskenlerine atanmasi, geri kalan elemanlarin ise arr dizisine doldurulmasi
 
 > const source = [1,2,3,4,5,6,7,8,9,10];  
 > let arr, a, b;  
@@ -32,27 +32,27 @@
 
 > arr.fill(deger, baslangic, son)
 
-### Arraye eleman ekleme ve cikarma
+### Diziye eleman ekleme ve cikarma
 
 > arr.push(deger), arr.pop()
 
-### Array iceriginde bir degeri arama, eleman bulunur ise bulundugu indexi dondurur, bulamaz ise -1 dondurur
+### Dizi iceriginde bir degeri arama, eleman bulunur ise bulundugu indexi dondurur, bulamaz ise -1 dondurur
 
 > arr.indexOf(deger)
 
-### Array elemanlari arasina istenen karakterin eklenmesi
+### Dizi elemanlari arasina istenen karakterin eklenmesi
 
 > arr.join(",")
 
-### Arrayin bir kisminin ayrilmasi
+### Dizinin bir kisminin ayrilmasi
 
 > arr.slice(baslangic, bitis)
 
-### Array elemanlarini siralama
+### Dizi elemanlarini siralama
 
 > arr.sort(function(a,b){ return a-b;})
 
-### Array elemanlarinin siralamasini tersine cevirme
+### Dizi elemanlarinin siralamasini tersine cevirme
 
 > arr.reverse()
 
@@ -70,7 +70,7 @@
     </code>
 </pre>
 
-### Callback function async
+### Asenkron callback fonksiyon kullanimi
 
 <pre>
     <code>
