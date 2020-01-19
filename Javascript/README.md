@@ -60,19 +60,27 @@
 
 ### forEach ile cok boyutlu array kullanimi
 
-> arr.forEach(function(row){  
-> row.forEach(function(col){  
-> console.log(col);});
+<pre>
+    <code>
+    arr.forEach(function(row){  
+        row.forEach(function(col){  
+        console.log(col);});
+    </code>
+</pre>
 
 ### Callback function async
 
-> let callbackFunc = () => {
-> console.log("done");
-> };  
-> setTimeout(callbackFunc, 2000); //milisec  
-> setTimeout(() => console.log("done"), 2000);
+<pre>
+    <code>
+    let callbackFunc = () => {
+        console.log("done");
+    };
+    setTimeout(callbackFunc, 2000); //milisaniye
+    setTimeout(() => console.log("done"), 2000);
+    </code>
+</pre>
 
-### Belirsiz sayida argunman alan fonksiyon
+### Belirsiz sayida parametre alan fonksiyon
 
 <pre>
     <code>
