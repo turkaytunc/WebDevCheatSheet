@@ -63,3 +63,11 @@ arr.forEach(function(element, index){console.log(element, index)})
 ### forEach ile cok boyutlu array kullanimi
 
 arr.forEach(function(row){row.forEach(function(col){console.log(col);});
+
+### Callback function
+
+let callbackFunc = () => {
+console.log("done");
+};
+
+setTimeout(callbackFunc, 2000); //milisec
