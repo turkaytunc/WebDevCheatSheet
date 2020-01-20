@@ -4,14 +4,15 @@
 
 ### Degiskenlerin degerlerini birbirleri ile degistirme
 
-<pre><code>
-    let a = 8, b = 6;
-    (() => {
-    [b, a] = [a, b];
-    })();  
-    console.log(a);  
-    console.log(b);
-</code></pre>
+```javascript
+let a = 8,
+  b = 6;
+(() => {
+  [b, a] = [a, b];
+})();
+console.log(a);
+console.log(b);
+```
 
 ### Bir dizinin ilk iki elemanini alma
 
