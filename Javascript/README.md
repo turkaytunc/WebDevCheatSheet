@@ -5,22 +5,19 @@
 ### Degiskenlerin degerlerini birbirleri ile degistirme
 
 ```javascript
-let a = 8,
-  b = 6;
-(() => {
-  [b, a] = [a, b];
-})();
+let a = 8,b = 6;
+(() => {[b, a] = [a, b];})();
 console.log(a);
 console.log(b);
 ```
 
 ### Bir dizinin ilk iki elemanini alma
 
-<pre><code>
+```javascript
     [b, a] = [...arr]
     const [a, b] = [1, 2, 3, 4, 5, 6];  
     console.log(a, b); // 1, 2
-</code></pre>
+```
 
 ### Her virgul bir elemani temsil ediyor, bu sekilde bir dizinin iceriginin bir kismi baska bir diziye aktarilabiliyor
 
@@ -91,7 +88,7 @@ console.log(b);
     let calc = (a, b, ...extra) => {
         if (a === undefined || b === undefined) {
             return "error";
-    }  
+    }
     let sum = a + b;
 
     for (i = 0; i < extra.length; i++) {
