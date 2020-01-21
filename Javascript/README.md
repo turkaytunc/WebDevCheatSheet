@@ -84,18 +84,18 @@ let callbackFunc = () => {console.log("done");};
 
 ### Belirsiz sayida parametre alan fonksiyon
 
-<pre><code>
-    let calc = (a, b, ...extra) => {
-        if (a === undefined || b === undefined) {
-            return "error";
+```javascript
+let calc = (a, b, ...extra) => {
+    if (a === undefined || b === undefined) {
+        return "error";
     }
     let sum = a + b;
 
     for (i = 0; i < extra.length; i++) {
         sum += extra[i];
-    }  
+    }
     return sum;
     };
 
-    console.log(calc(3, 5, 8, 10, 20));
-</code></pre>
+console.log(calc(3, 5, 8, 10, 20));
+```
