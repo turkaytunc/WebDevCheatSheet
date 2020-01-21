@@ -1,6 +1,6 @@
 # Javascript Cheatsheet
 
-## Basit Fonksiyonlar ve notlar
+## Bazi Fonksiyonlarin kullanimi ve notlar
 
 ### Degiskenlerin degerlerini birbirleri ile degistirme
 
@@ -14,23 +14,25 @@ console.log(b);
 ### Bir dizinin ilk iki elemanini alma
 
 ```javascript
-    [b, a] = [...arr]
-    const [a, b] = [1, 2, 3, 4, 5, 6];  
-    console.log(a, b); // 1, 2
+[b, a] = [...arr]
+const [a, b] = [1, 2, 3, 4, 5, 6];  
+console.log(a, b); // 1, 2
 ```
 
 ### Her virgul bir elemani temsil ediyor, bu sekilde bir dizinin iceriginin bir kismi baska bir diziye aktarilabiliyor
 
-> const [a, b,,, c] = [1, 2, 3, 4, 5, 6];  
-> console.log(a, b, c); // 1, 2, 5
+```javascript
+const [a, b,,, c] = [1, 2, 3, 4, 5, 6];  
+console.log(a, b, c); // 1, 2, 5
+```
 
 ### Elemanlarin ilk ikisini a ve b degiskenlerine atanmasi, geri kalan elemanlarin ise arr dizisine doldurulmasi
 
-<pre><code>
-    const source = [1,2,3,4,5,6,7,8,9,10];  
-    let arr, a, b;  
-    [a, b, ...arr] = source;
-</code></pre>
+```javascript
+const source = [1,2,3,4,5,6,7,8,9,10];  
+let arr, a, b;  
+[a, b, ...arr] = source;
+```
 
 ### Arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
 
@@ -66,21 +68,19 @@ console.log(b);
 
 ### forEach ile cok boyutlu array kullanimi
 
-<pre><code>
-    arr.forEach(function(row){  
-        row.forEach(function(col){  
-        console.log(col);});
-</code></pre>
+```javascript
+arr.forEach(function(row){  
+    row.forEach(function(col){  
+    console.log(col);});
+```
 
 ### Asenkron callback fonksiyon kullanimi
 
-<pre><code>
-    let callbackFunc = () => {
-        console.log("done");
-    };
+```javascript
+let callbackFunc = () => {console.log("done");};
     setTimeout(callbackFunc, 2000); //milisaniye
     setTimeout(() => console.log("done"), 2000);
-</code></pre>
+```
 
 ### Belirsiz sayida parametre alan fonksiyon
 
