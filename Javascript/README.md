@@ -99,3 +99,16 @@ let calc = (a, b, ...extra) => {
 
 console.log(calc(3, 5, 8, 10, 20));
 ```
+
+### Try-catch-finally kullanimi
+
+```javascript
+let deneme = () => console.log("Baglanmaya Calis");
+try {
+  deneme;
+} catch (e) {
+  console.log("Hata: ", e.toString().slice(11, 50));
+} finally {
+  setTimeout(() => console.log("Baglanti kesildi"), 2000);
+}
+```
