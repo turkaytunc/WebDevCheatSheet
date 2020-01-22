@@ -113,6 +113,21 @@ try {
 }
 ```
 
+## Siniflar
+
+### Sinif tanimi ve bu siniftan nesne olusturma
+
+```javascript
+class YeniSinif {
+    constructor(){
+        console.log("nesne olusturuldu");
+    }
+}
+
+let yeniNesne = new YeniSinif();
+console.log(yeniNesne);
+```
+
 ## DOM kullanimi ve bazi methodlar
 
 ### Bir html tag'inin sahip oldugu class ve id ismini kullanarak secme
@@ -149,7 +164,8 @@ docClass.style.border = "solid 5px #111";
 ```javascript
 let doc = document.getElementsByClassName("list-group-item");
 
-let arr = [...doc];
+let arr = [...doc];// ES6 ile
+//veya
 let arr = Array.from(doc);
 
 arr.forEach(element => {
