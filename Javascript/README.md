@@ -173,3 +173,12 @@ arr.forEach(element => {
 });
 
 ```
+
+## Ipucu
+
+### Fonksiyonun aninda invoke edilmesi
+
+```javascript
+(function sayHi() {console.log("HI");})();// (fonk)() seklinde kullanilir
+
+```
