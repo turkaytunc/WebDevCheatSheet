@@ -112,3 +112,34 @@ try {
   setTimeout(() => console.log("Baglanti kesildi"), 2000);
 }
 ```
+
+## DOM kullanimi ve bazi methodlar
+
+### Bir html tag'inin sahip oldugu class ve id ismini kullanarak secme
+
+```javascript
+let docID    =  document.getElementById("idAdi");
+let docClass =  document.getElementByClassName("classAdi");
+
+console.log(docID);
+console.log(docClass);
+```
+
+### innerHTML - innerText - textContent
+
+```javascript
+let doc = document.getElementById("id");
+
+doc.innerText = "hi";// sadece text icerik ile ilgilenir
+doc.textContent = "hello";// css stillerini de dikkate alir
+doc.innerHTML = `<p>hey</p>`;// cocuk uye olarak paragraf ekler
+```
+
+### DOM style ile css ozelligi degistirme
+
+```javascript
+let docClass =  document.getElementByClassName("classAdi");
+
+docClass.style.border = "solid 5px #111";
+
+```
