@@ -143,3 +143,17 @@ let docClass =  document.getElementByClassName("classAdi");
 docClass.style.border = "solid 5px #111";
 
 ```
+
+### HTMLcollection'dan array uretme
+
+```javascript
+let doc = document.getElementsByClassName("list-group-item");
+
+let arr = [...doc];
+let arr = Array.from(doc);
+
+arr.forEach(element => {
+    element.style.backgroundColor = "aliceblue";
+});
+
+```
