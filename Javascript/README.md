@@ -150,6 +150,20 @@ doc.textContent = "hello";// css stillerini de dikkate alir
 doc.innerHTML = `<p>hey</p>`;// cocuk uye olarak paragraf ekler
 ```
 
+### Sik kullanilan property'ler
+
+```javascript
+let itemList = document.querySelector("#items");
+
+console.log(itemList.parentElement);
+console.log(itemList.children);
+console.log(itemList.nextElementSibling);
+console.log(itemList.previousElementSibling);
+console.log(itemList.firstElementChild);
+console.log(itemList.lastElementChild);
+
+```
+
 ### DOM style ile css ozelligi degistirme
 
 ```javascript
