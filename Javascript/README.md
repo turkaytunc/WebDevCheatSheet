@@ -188,6 +188,23 @@ arr.forEach(element => {
 
 ```
 
+### Yeni bir node olusturup icerik ekleme
+
+```javascript
+let newDiv = document.createElement("div");
+
+newDiv.className = "yeniClass";
+newDiv.id = "yeniID"
+newDiv.setAttribute("type", "input");
+
+newDiv.appendChild(document.createTextNode("Ana Sayfa"));
+
+let container = document.querySelector("header .container");
+let h1 = document.querySelector("header h1");
+
+container.insertBefore(newDiv, h1);
+```
+
 ## Ipucu
 
 ### Fonksiyonun aninda invoke edilmesi
