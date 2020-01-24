@@ -205,6 +205,16 @@ let h1 = document.querySelector("header h1");
 container.insertBefore(newDiv, h1);
 ```
 
+### EventListener kullanimi
+
+```javascript
+document.getElementById("button").addEventListener('click', buttonClick);
+
+function buttonClick() {
+    doSomethingFunction();
+}
+```
+
 ## Ipucu
 
 ### Fonksiyonun aninda invoke edilmesi
