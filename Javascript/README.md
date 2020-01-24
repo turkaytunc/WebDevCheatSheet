@@ -215,6 +215,19 @@ function buttonClick() {
 }
 ```
 
+### EventListener ile mouse+tus seklinde bir kombinasyon ile tiklama
+
+```javascript
+document.getElementById("button").addEventListener('click', buttonClick);
+
+function buttonClick(e) {
+    console.log(e.altKey);
+    console.log(e.ctrlKey);
+    console.log(e.offsetX);
+    console.log(e.offsetY);
+}
+```
+
 ## Ipucu
 
 ### Fonksiyonun aninda invoke edilmesi
