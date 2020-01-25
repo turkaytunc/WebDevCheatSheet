@@ -5,8 +5,11 @@
 ### Degiskenlerin degerlerini birbirleri ile degistirme
 
 ```javascript
-let a = 8,b = 6;
-(() => {[b, a] = [a, b];})();
+let a = 8,
+  b = 6;
+(() => {
+  [b, a] = [a, b];
+})();
 console.log(a);
 console.log(b);
 ```
@@ -14,23 +17,23 @@ console.log(b);
 ### Bir dizinin ilk iki elemanini alma
 
 ```javascript
-[b, a] = [...arr]
-const [a, b] = [1, 2, 3, 4, 5, 6];  
+[b, a] = [...arr];
+const [a, b] = [1, 2, 3, 4, 5, 6];
 console.log(a, b); // 1, 2
 ```
 
 ### Her virgul bir elemani temsil ediyor, bu sekilde bir dizinin iceriginin bir kismi baska bir diziye aktarilabiliyor
 
 ```javascript
-const [a, b,,, c] = [1, 2, 3, 4, 5, 6];  
+const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c); // 1, 2, 5
 ```
 
 ### Elemanlarin ilk ikisini a ve b degiskenlerine atanmasi, geri kalan elemanlarin ise arr dizisine doldurulmasi
 
 ```javascript
-const source = [1,2,3,4,5,6,7,8,9,10];  
-let arr, a, b;  
+const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let arr, a, b;
 [a, b, ...arr] = source;
 ```
 
@@ -69,33 +72,35 @@ let arr, a, b;
 ### forEach ile cok boyutlu array kullanimi
 
 ```javascript
-arr.forEach(function(row){  
-    row.forEach(function(col){  
+arr.forEach(function(row){
+    row.forEach(function(col){
     console.log(col);});
 ```
 
 ### Asenkron callback fonksiyon kullanimi
 
 ```javascript
-let callbackFunc = () => {console.log("done");};
-    setTimeout(callbackFunc, 2000); //milisaniye
-    setTimeout(() => console.log("done"), 2000);
+let callbackFunc = () => {
+  console.log("done");
+};
+setTimeout(callbackFunc, 2000); //milisaniye
+setTimeout(() => console.log("done"), 2000);
 ```
 
 ### Belirsiz sayida parametre alan fonksiyon
 
 ```javascript
 let calc = (a, b, ...extra) => {
-    if (a === undefined || b === undefined) {
-        return "error";
-    }
-    let sum = a + b;
+  if (a === undefined || b === undefined) {
+    return "error";
+  }
+  let sum = a + b;
 
-    for (i = 0; i < extra.length; i++) {
-        sum += extra[i];
-    }
-    return sum;
-    };
+  for (i = 0; i < extra.length; i++) {
+    sum += extra[i];
+  }
+  return sum;
+};
 
 console.log(calc(3, 5, 8, 10, 20));
 ```
@@ -119,9 +124,9 @@ try {
 
 ```javascript
 class YeniSinif {
-    constructor(){
-        console.log("nesne olusturuldu");
-    }
+  constructor() {
+    console.log("nesne olusturuldu");
+  }
 }
 
 let yeniNesne = new YeniSinif();
@@ -133,8 +138,8 @@ console.log(yeniNesne);
 ### Bir html tag'inin sahip oldugu class ve id ismini kullanarak secme
 
 ```javascript
-let docID    =  document.getElementById("idAdi");
-let docClass =  document.getElementByClassName("classAdi");
+let docID = document.getElementById("idAdi");
+let docClass = document.getElementByClassName("classAdi");
 
 console.log(docID);
 console.log(docClass);
@@ -145,9 +150,9 @@ console.log(docClass);
 ```javascript
 let doc = document.getElementById("id");
 
-doc.innerText = "hi";// sadece text icerik ile ilgilenir
-doc.textContent = "hello";// css stillerini de dikkate alir
-doc.innerHTML = `<p>hey</p>`;// cocuk uye olarak paragraf ekler
+doc.innerText = "hi"; // sadece text icerik ile ilgilenir
+doc.textContent = "hello"; // css stillerini de dikkate alir
+doc.innerHTML = `<p>hey</p>`; // cocuk uye olarak paragraf ekler
 ```
 
 ### Sik kullanilan property'ler
@@ -161,16 +166,14 @@ console.log(itemList.nextElementSibling);
 console.log(itemList.previousElementSibling);
 console.log(itemList.firstElementChild);
 console.log(itemList.lastElementChild);
-
 ```
 
 ### DOM style ile css ozelligi degistirme
 
 ```javascript
-let docClass =  document.getElementByClassName("classAdi");
+let docClass = document.getElementByClassName("classAdi");
 
 docClass.style.border = "solid 5px #111";
-
 ```
 
 ### HTMLcollection'dan array uretme
@@ -178,14 +181,13 @@ docClass.style.border = "solid 5px #111";
 ```javascript
 let doc = document.getElementsByClassName("list-group-item");
 
-let arr = [...doc];// ES6 ile
+let arr = [...doc]; // ES6 ile
 //veya
 let arr = Array.from(doc);
 
 arr.forEach(element => {
-    element.style.backgroundColor = "aliceblue";
+  element.style.backgroundColor = "aliceblue";
 });
-
 ```
 
 ### Yeni bir node olusturup icerik ekleme
@@ -194,7 +196,7 @@ arr.forEach(element => {
 let newDiv = document.createElement("div");
 
 newDiv.className = "yeniClass";
-newDiv.id = "yeniID"
+newDiv.id = "yeniID";
 newDiv.setAttribute("type", "input");
 
 newDiv.appendChild(document.createTextNode("Ana Sayfa"));
@@ -208,23 +210,23 @@ container.insertBefore(newDiv, h1);
 ### EventListener kullanimi
 
 ```javascript
-document.getElementById("button").addEventListener('click', buttonClick);
+document.getElementById("button").addEventListener("click", buttonClick);
 
 function buttonClick() {
-    doSomethingFunction();
+  doSomethingFunction();
 }
 ```
 
 ### EventListener ile mouse+tus seklinde bir kombinasyon ile tiklama
 
 ```javascript
-document.getElementById("button").addEventListener('click', buttonClick);
+document.getElementById("button").addEventListener("click", buttonClick);
 
 function buttonClick(e) {
-    console.log(e.altKey);
-    console.log(e.ctrlKey);
-    console.log(e.offsetX);
-    console.log(e.offsetY);
+  console.log(e.altKey);
+  console.log(e.ctrlKey);
+  console.log(e.offsetX);
+  console.log(e.offsetY);
 }
 ```
 
@@ -233,6 +235,20 @@ function buttonClick(e) {
 ### Fonksiyonun aninda invoke edilmesi
 
 ```javascript
-(function sayHi() {console.log("HI");})();// (fonk)() seklinde kullanilir
+(function sayHi() {
+  console.log("HI");
+})(); // (fonk)() seklinde kullanilir
+```
 
+### Nesne parcalama
+
+```javascript
+const address = {
+  street: "",
+  city: "",
+  country: ""
+};
+
+const { street: streetVarAlias, city, country } = address; // streetVarAlias ismi stree degisken ismi yerine kullanilmasi icin yazildi
+console.log(streetVarAlias, city, country);
 ```
