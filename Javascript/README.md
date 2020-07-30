@@ -185,7 +185,7 @@ let arr = [...doc]; // ES6 ile
 //veya
 let arr = Array.from(doc);
 
-arr.forEach(element => {
+arr.forEach((element) => {
   element.style.backgroundColor = "aliceblue";
 });
 ```
@@ -246,9 +246,26 @@ function buttonClick(e) {
 const address = {
   street: "",
   city: "",
-  country: ""
+  country: "",
 };
 
 const { street: streetVarAlias, city, country } = address; // streetVarAlias ismi stree degisken ismi yerine kullanilmasi icin yazildi
 console.log(streetVarAlias, city, country);
+```
+
+### Icice olan nesneleri parcalama
+
+```javascript
+const regularPerson = {
+  firstname: "Ali",
+  lastname: "Yilmaz",
+  spouse: {
+    firstname: "Ece",
+    lastname: "Yilmaz",
+  },
+};
+
+const lordify = ({ spouse: { firstname } }) => {
+  console.log(`${firstname}`);
+};
 ```
