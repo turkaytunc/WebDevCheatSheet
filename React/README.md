@@ -172,3 +172,25 @@ export const EffectHook = () => {
   );
 };
 ```
+
+## Dependency Check in useEffect
+
+```javascript
+import React, { useState, useEffect } from "react";
+
+export const EffectHook = () => {
+  const [count, setCount] = useState(0);
+
+  const incrementOne = () => {
+    setCount(count + 1);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(incrementOne, 1000);
+
+    return () => clearInterval(interval);
+  }, [count]);
+
+  return <div>{count}</div>;
+};
+```
