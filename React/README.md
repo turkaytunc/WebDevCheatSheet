@@ -93,3 +93,26 @@ export const EffectHook = () => {
   );
 };
 ```
+
+## Conditionally run effect hook
+
+```javascript
+import React, { useState, useEffect } from "react";
+
+export const EffectHook = () => {
+  const [count, setCount] = useState(0);
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    document.title = `Clicked ${count} times.`;
+  }, [count]);
+  return (
+    <div>
+      <input type="text" onChange={(e) => setUsername(e.target.value)}></input>
+      <button onClick={() => setCount(count + 1)}>
+        Clicked {`${count}`} times.
+      </button>
+    </div>
+  );
+};
+```
