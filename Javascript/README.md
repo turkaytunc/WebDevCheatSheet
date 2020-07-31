@@ -283,3 +283,19 @@ Vacation.prototype.print = function () {
 const maui = new Vacation("Maui", 7);
 maui.print(); // Maui | 7 days
 ```
+
+### importing modules
+
+You can scope module variables locally under different variable
+
+```javascript
+import { print as p, log as l } from "./text-helpers";
+p("printing a message");
+l("logging a message");
+```
+
+You can also import everything into a single variable using \*:
+
+```javascript
+import * as fns from './text-helpers`
+```
