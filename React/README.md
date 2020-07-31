@@ -142,3 +142,33 @@ export const EffectHook = () => {
   );
 };
 ```
+
+## useEffect cleanup
+
+```javascript
+import React, { useState, useEffect } from "react";
+
+export const EffectHook = () => {
+  const [cursorPosition, setCursorPosition] = useState({ xPos: 0, yPos: 0 });
+
+  const getMousePosition = (e) => {
+    setCursorPosition({ ...cursorPosition, xPos: e.clientX, yPos: e.clientY });
+    console.log("mousemove called!");
+  };
+
+  useEffect(() => {
+    window.addEventListener("mousemove", getMousePosition);
+
+    return () => {
+      window.removeEventListener("mousemove", getMousePosition);
+    };
+  }, []);
+  return (
+    <div>
+      Mouse X: {cursorPosition.xPos}
+      <br />
+      Mouse Y: {cursorPosition.yPos}
+    </div>
+  );
+};
+```
