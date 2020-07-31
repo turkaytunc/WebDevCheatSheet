@@ -194,3 +194,74 @@ export const EffectHook = () => {
   return <div>{count}</div>;
 };
 ```
+
+## Data fetch with hooks and async-await
+
+```javascript
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+export const EffectHook = () => {
+  const [users, setUsers] = useState([]);
+
+  async function getUsers() {
+    try {
+      const response = await axios.get(
+        `https://jsonplaceholder.typicode.com/users`
+      );
+      setUsers(response.data);
+    } catch (error) {
+      console.log("something went wrong! \n error is : ", error);
+    }
+  }
+
+  useEffect(() => {
+    getUsers();
+  }, []);
+
+  const usersList = users.map((user) => {
+    return (
+      <li key={user.id}>
+        UserName: {user.name} UserEmail: {user.email}
+      </li>
+    );
+  });
+
+  return (
+    <div>
+      <ul>{usersList}</ul>
+    </div>
+  );
+};
+```
+
+## Data fetch with hooks and axios with promises
+
+```javascript
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+
+export const EffectHook = () => {
+  const [users, setUsers] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`https://jsonplaceholder.typicode.com/users`)
+      .then((response) => setUsers(response.data))
+      .catch();
+  }, []);
+
+  const usersList = users.map((user) => {
+    return (
+      <li key={user.id}>
+        UserName: {user.name} UserEmail: {user.email}
+      </li>
+    );
+  });
+
+  return (
+    <div>
+      <ul>{usersList}</ul>
+    </div>
+  );
+};
+```
