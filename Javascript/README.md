@@ -357,3 +357,15 @@ const filteredArray = filterArray(numbers, 7);
 console.log(filteredArray); // [2, 5, 1, 3, 0];
 console.log(numbers); // [10, 9, 8, 2, 7, 5, 1, 3, 0]
 ```
+
+### reduce function
+
+```javascript
+var values = [1, 2, -3, -4, 5, 6];
+
+const sum = (acc, current) => acc + current; // reduce takes (accumulator, currentValue, index)
+
+const sumOfValues = values.map(Math.abs).reduce(sum, 0); // reduce(callback, initialValue)
+
+console.log(sumOfValues);
+```
