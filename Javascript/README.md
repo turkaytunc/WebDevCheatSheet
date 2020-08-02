@@ -311,3 +311,27 @@ scream("functions can be returned from other functions");
 scream("createScream returns a function");
 scream("scream invokes that returned function");
 ```
+
+### pure function - effect object
+
+```javascript
+let color_lawn = {
+  title: "lawn",
+  color: "#00FF00",
+  rating: 0,
+};
+
+const rateColor = (color, rating) => ({ ...color, rating: rating });
+console.log(rateColor(color_lawn, 5).rating); // 5
+console.log(color_lawn.rating); // 0
+```
+
+### pure function - effect array
+
+```javascript
+let list = [{ title: "Rad Red" }, { title: "Lawn" }, { title: "PartyPink" }];
+
+const addColor = (title, colors) => [...colors, { title: title }];
+console.log(addColor("GlamGreen", list).length); // 4
+console.log(list.length); // 3
+```
