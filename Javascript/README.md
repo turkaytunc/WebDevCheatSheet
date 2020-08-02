@@ -286,7 +286,7 @@ maui.print(); // Maui | 7 days
 
 ### importing modules
 
-You can scope module variables locally under different variable
+You can scope module variables locally under different variable names
 
 ```javascript
 import { print as p, log as l } from "./text-helpers";
@@ -298,4 +298,16 @@ You can also import everything into a single variable using \*:
 
 ```javascript
 import * as fns from './text-helpers`
+```
+
+### higher order function
+
+```javascript
+const createScream = (logger) => (message) =>
+  logger(message.toUpperCase() + "!!!");
+
+const scream = createScream((message) => console.log(message));
+scream("functions can be returned from other functions");
+scream("createScream returns a function");
+scream("scream invokes that returned function");
 ```
