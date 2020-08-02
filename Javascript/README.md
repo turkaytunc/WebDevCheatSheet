@@ -335,3 +335,25 @@ const addColor = (title, colors) => [...colors, { title: title }];
 console.log(addColor("GlamGreen", list).length); // 4
 console.log(list.length); // 3
 ```
+
+### filter function
+
+```javascript
+const numbers = [10, 9, 8, 2, 7, 5, 1, 3, 0];
+
+// const findSmallNumber = (number, smallThanThis) => number < smallThanThis;
+
+// function filterArray(listOfNumbers, smallThanThis) {
+//   return listOfNumbers.filter((number) => findSmallNumber(number, smallThanThis));
+// }
+
+function findSmallNumber(number) {
+  return number < this;
+}
+const filterArray = (listOfNumbers, smallThanThis) =>
+  listOfNumbers.filter(findSmallNumber, smallThanThis); // second argument can be used as this;
+
+const filteredArray = filterArray(numbers, 7);
+console.log(filteredArray); // [2, 5, 1, 3, 0];
+console.log(numbers); // [10, 9, 8, 2, 7, 5, 1, 3, 0]
+```
