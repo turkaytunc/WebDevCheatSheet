@@ -389,3 +389,19 @@ const sumElements = curriedDot([1, 1, 1]);
 console.log(sumElements([1, 3, -5])); // -1
 console.log(sumElements([4, -2, -1])); // 1
 ```
+
+### optional chaining operator (?.)
+
+```javascript
+// check if myObj.prop1 is defined before trying to access prop2
+myObj.prop1?.prop2; // will give undefined if either prop1 or prop2 doesn't exist
+
+// check if myObj.prop1 is defined before trying to access "prop 2"
+myObj.prop1?.["prop 2"];
+
+// check if myObj.method is defined before trying to call it
+myObj.method?.();
+
+// check if myArr[5] is defined before trying to access its 8th index
+myArr[5]?.[8];
+```
