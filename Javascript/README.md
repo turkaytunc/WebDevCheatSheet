@@ -405,3 +405,21 @@ myObj.method?.();
 // check if myArr[5] is defined before trying to access its 8th index
 myArr[5]?.[8];
 ```
+
+### Proper use of localstorage
+
+```javascript
+​​const obj = { name: "JavaScript" };
+
+​​window.localStorage.setItem("test-object", JSON.stringify(obj));
+​​const objInStorage = window.localStorage.getItem("test-object");
+
+​​console.log(JSON.parse(objInStorage));​​// {name: 'JavaScript'}
+
+​​const arr = ["JavaScript", "programming", 45];
+
+​​window.localStorage.setItem("test-array", JSON.stringify(arr));
+​​const arrInStorage = window.localStorage.getItem("test-array");
+
+​​console.log(JSON.parse(arrInStorage));​​// JavaScript, programming, 45
+```
