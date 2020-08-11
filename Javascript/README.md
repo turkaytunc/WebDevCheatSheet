@@ -438,7 +438,7 @@ const daysOfTheWeek = [
 ];
 function getDayName(dateString) {
   const currentDate = new Date(dateString);
-  const dayName = daysOfTheWeek[currentDate.getDay()];
+  const dayName = daysOfTheWeek[currentDate.getUTCDay()];
   return dayName;
 }
 ```
