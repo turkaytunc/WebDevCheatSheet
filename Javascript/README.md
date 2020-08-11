@@ -423,3 +423,22 @@ myArr[5]?.[8];
 
 ​​console.log(JSON.parse(arrInStorage));​​// JavaScript, programming, 45
 ```
+
+### Get current day's name or given date's name
+
+```javascript
+const daysOfTheWeek = [
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
+];
+function getDayName(dateString) {
+  const currentDate = new Date(dateString);
+  const dayName = daysOfTheWeek[currentDate.getDay()];
+  return dayName;
+}
+```
