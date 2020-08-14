@@ -81,10 +81,10 @@ arr.forEach(function(row){
 
 ```javascript
 let callbackFunc = () => {
-  console.log("done");
+  console.log('done');
 };
 setTimeout(callbackFunc, 2000); //milisaniye
-setTimeout(() => console.log("done"), 2000);
+setTimeout(() => console.log('done'), 2000);
 ```
 
 ### Belirsiz sayida parametre alan fonksiyon
@@ -92,7 +92,7 @@ setTimeout(() => console.log("done"), 2000);
 ```javascript
 let calc = (a, b, ...extra) => {
   if (a === undefined || b === undefined) {
-    return "error";
+    return 'error';
   }
   let sum = a + b;
 
@@ -108,13 +108,13 @@ console.log(calc(3, 5, 8, 10, 20));
 ### Try-catch-finally kullanimi
 
 ```javascript
-let deneme = () => console.log("Baglanmaya Calis");
+let deneme = () => console.log('Baglanmaya Calis');
 try {
   deneme;
 } catch (e) {
-  console.log("Hata: ", e.toString().slice(11, 50));
+  console.log('Hata: ', e.toString().slice(11, 50));
 } finally {
-  setTimeout(() => console.log("Baglanti kesildi"), 2000);
+  setTimeout(() => console.log('Baglanti kesildi'), 2000);
 }
 ```
 
@@ -125,7 +125,7 @@ try {
 ```javascript
 class YeniSinif {
   constructor() {
-    console.log("nesne olusturuldu");
+    console.log('nesne olusturuldu');
   }
 }
 
@@ -138,8 +138,8 @@ console.log(yeniNesne);
 ### Bir html tag'inin sahip oldugu class ve id ismini kullanarak secme
 
 ```javascript
-let docID = document.getElementById("idAdi");
-let docClass = document.getElementByClassName("classAdi");
+let docID = document.getElementById('idAdi');
+let docClass = document.getElementByClassName('classAdi');
 
 console.log(docID);
 console.log(docClass);
@@ -148,17 +148,17 @@ console.log(docClass);
 ### innerHTML - innerText - textContent
 
 ```javascript
-let doc = document.getElementById("id");
+let doc = document.getElementById('id');
 
-doc.innerText = "hi"; // sadece text icerik ile ilgilenir
-doc.textContent = "hello"; // css stillerini de dikkate alir
+doc.innerText = 'hi'; // sadece text icerik ile ilgilenir
+doc.textContent = 'hello'; // css stillerini de dikkate alir
 doc.innerHTML = `<p>hey</p>`; // cocuk uye olarak paragraf ekler
 ```
 
 ### Sik kullanilan property'ler
 
 ```javascript
-let itemList = document.querySelector("#items");
+let itemList = document.querySelector('#items');
 
 console.log(itemList.parentElement);
 console.log(itemList.children);
@@ -171,38 +171,38 @@ console.log(itemList.lastElementChild);
 ### DOM style ile css ozelligi degistirme
 
 ```javascript
-let docClass = document.getElementByClassName("classAdi");
+let docClass = document.getElementByClassName('classAdi');
 
-docClass.style.border = "solid 5px #111";
+docClass.style.border = 'solid 5px #111';
 ```
 
 ### HTMLcollection'dan array uretme
 
 ```javascript
-let doc = document.getElementsByClassName("list-group-item");
+let doc = document.getElementsByClassName('list-group-item');
 
 let arr = [...doc]; // ES6 ile
 //veya
 let arr = Array.from(doc);
 
 arr.forEach((element) => {
-  element.style.backgroundColor = "aliceblue";
+  element.style.backgroundColor = 'aliceblue';
 });
 ```
 
 ### Yeni bir node olusturup icerik ekleme
 
 ```javascript
-let newDiv = document.createElement("div");
+let newDiv = document.createElement('div');
 
-newDiv.className = "yeniClass";
-newDiv.id = "yeniID";
-newDiv.setAttribute("type", "input");
+newDiv.className = 'yeniClass';
+newDiv.id = 'yeniID';
+newDiv.setAttribute('type', 'input');
 
-newDiv.appendChild(document.createTextNode("Ana Sayfa"));
+newDiv.appendChild(document.createTextNode('Ana Sayfa'));
 
-let container = document.querySelector("header .container");
-let h1 = document.querySelector("header h1");
+let container = document.querySelector('header .container');
+let h1 = document.querySelector('header h1');
 
 container.insertBefore(newDiv, h1);
 ```
@@ -210,7 +210,7 @@ container.insertBefore(newDiv, h1);
 ### EventListener kullanimi
 
 ```javascript
-document.getElementById("button").addEventListener("click", buttonClick);
+document.getElementById('button').addEventListener('click', buttonClick);
 
 function buttonClick() {
   doSomethingFunction();
@@ -220,7 +220,7 @@ function buttonClick() {
 ### EventListener ile mouse+tus seklinde bir kombinasyon ile tiklama
 
 ```javascript
-document.getElementById("button").addEventListener("click", buttonClick);
+document.getElementById('button').addEventListener('click', buttonClick);
 
 function buttonClick(e) {
   console.log(e.altKey);
@@ -236,7 +236,7 @@ function buttonClick(e) {
 
 ```javascript
 (function sayHi() {
-  console.log("HI");
+  console.log('HI');
 })(); // (fonk)() seklinde kullanilir
 ```
 
@@ -244,9 +244,9 @@ function buttonClick(e) {
 
 ```javascript
 const address = {
-  street: "",
-  city: "",
-  country: "",
+  street: '',
+  city: '',
+  country: '',
 };
 
 const { street: streetVarAlias, city, country } = address; // streetVarAlias ismi stree degisken ismi yerine kullanilmasi icin yazildi
@@ -257,11 +257,11 @@ console.log(streetVarAlias, city, country);
 
 ```javascript
 const regularPerson = {
-  firstname: "Ali",
-  lastname: "Yilmaz",
+  firstname: 'Ali',
+  lastname: 'Yilmaz',
   spouse: {
-    firstname: "Ece",
-    lastname: "Yilmaz",
+    firstname: 'Ece',
+    lastname: 'Yilmaz',
   },
 };
 
@@ -278,9 +278,9 @@ function Vacation(destination, length) {
   this.length = length;
 }
 Vacation.prototype.print = function () {
-  console.log(this.destination + " | " + this.length + " days");
+  console.log(this.destination + ' | ' + this.length + ' days');
 };
-const maui = new Vacation("Maui", 7);
+const maui = new Vacation('Maui', 7);
 maui.print(); // Maui | 7 days
 ```
 
@@ -289,9 +289,9 @@ maui.print(); // Maui | 7 days
 You can scope module variables locally under different variable names
 
 ```javascript
-import { print as p, log as l } from "./text-helpers";
-p("printing a message");
-l("logging a message");
+import { print as p, log as l } from './text-helpers';
+p('printing a message');
+l('logging a message');
 ```
 
 You can also import everything into a single variable using \*:
@@ -304,20 +304,20 @@ import * as fns from './text-helpers`
 
 ```javascript
 const createScream = (logger) => (message) =>
-  logger(message.toUpperCase() + "!!!");
+  logger(message.toUpperCase() + '!!!');
 
 const scream = createScream((message) => console.log(message));
-scream("functions can be returned from other functions");
-scream("createScream returns a function");
-scream("scream invokes that returned function");
+scream('functions can be returned from other functions');
+scream('createScream returns a function');
+scream('scream invokes that returned function');
 ```
 
 ### pure function - effect object
 
 ```javascript
 let color_lawn = {
-  title: "lawn",
-  color: "#00FF00",
+  title: 'lawn',
+  color: '#00FF00',
   rating: 0,
 };
 
@@ -329,10 +329,10 @@ console.log(color_lawn.rating); // 0
 ### pure function - effect array
 
 ```javascript
-let list = [{ title: "Rad Red" }, { title: "Lawn" }, { title: "PartyPink" }];
+let list = [{ title: 'Rad Red' }, { title: 'Lawn' }, { title: 'PartyPink' }];
 
 const addColor = (title, colors) => [...colors, { title: title }];
-console.log(addColor("GlamGreen", list).length); // 4
+console.log(addColor('GlamGreen', list).length); // 4
 console.log(list.length); // 3
 ```
 
@@ -397,7 +397,7 @@ console.log(sumElements([4, -2, -1])); // 1
 myObj.prop1?.prop2; // will give undefined if either prop1 or prop2 doesn't exist
 
 // check if myObj.prop1 is defined before trying to access "prop 2"
-myObj.prop1?.["prop 2"];
+myObj.prop1?.['prop 2'];
 
 // check if myObj.method is defined before trying to call it
 myObj.method?.();
@@ -428,13 +428,13 @@ myArr[5]?.[8];
 
 ```javascript
 const daysOfTheWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  'Sunday',
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
 ];
 function getDayName(dateString) {
   const currentDate = new Date(dateString);
@@ -446,7 +446,7 @@ function getDayName(dateString) {
 ### distinct items from array
 
 ```javascript
-const colors = ["red", "red", "green", "blue", "green"];
+const colors = ['red', 'red', 'green', 'blue', 'green'];
 const uniqueColors = colors.reduce(
   (unique, color) =>
     unique.indexOf(color) !== -1 ? unique : [...unique, color],
@@ -469,9 +469,27 @@ function findDistinct(nums) {
 
 ```javascript
 const deepPick = (fields, object = {}) => {
-  const [first, ...remaining] = fields.split(".");
+  const [first, ...remaining] = fields.split('.');
   return remaining.length
-    ? deepPick(remaining.join("."), object[first])
+    ? deepPick(remaining.join('.'), object[first])
     : object[first];
 };
+```
+
+### Wait x amount of seconds
+
+```javascript
+function waitMiliseconds(amount) {
+  console.time('calc');
+  console.log('function started!');
+
+  let ms = amount + new Date().getTime();
+
+  while (new Date() < ms) {}
+
+  console.log('function finished');
+  console.timeEnd('calc');
+}
+
+waitSeconds(5000);
 ```
