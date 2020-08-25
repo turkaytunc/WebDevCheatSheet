@@ -508,3 +508,10 @@ function sayHello(firstName, lastName) {
 sayHello('Erik', 'Shawn'); // Hello Erik Shawn!
 sayHello(); // Missing parameters!!
 ```
+
+### URI encoding
+
+```javascript
+let params = encodeURIComponent('mango & pineapple');
+let url = 'http://mysite.com/?search=' + params; //http://mysite.com/?search=mango%20%26%20pineapple
+```
