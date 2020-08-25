@@ -493,3 +493,18 @@ function waitMiliseconds(amount) {
 
 waitSeconds(5000);
 ```
+
+### Arguments keyword
+
+```javascript
+function sayHello(firstName, lastName) {
+  if (arguments.length === 0) {
+    console.log('Missing parameters!!');
+    return;
+  }
+  console.log(`Hello ${firstName} ${lastName}!`);
+}
+
+sayHello('Erik', 'Shawn'); // Hello Erik Shawn!
+sayHello(); // Missing parameters!!
+```
