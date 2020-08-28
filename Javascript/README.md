@@ -76,15 +76,17 @@ arr.sort((a, b) => a - b); //low to high
 arr.sort((a, b) => b - a); //high to low
 ```
 
-### Dizi elemanlarinin siralamasini tersine cevirme
+### Reverse the given array
 
-> arr.reverse()
+```javascript
+arr.reverse();
+```
 
-### forEach dongusu kullanimi
+### How to use forEach
 
 > arr.forEach(function(element, index){console.log(element, index)})
 
-### forEach ile cok boyutlu array kullanimi
+### Iterating multidimensional array with forEach
 
 ```javascript
 arr.forEach(function(row){
@@ -92,20 +94,20 @@ arr.forEach(function(row){
     console.log(col);});
 ```
 
-### Asenkron callback fonksiyon kullanimi
+### Asenkron callback
 
 ```javascript
 let callbackFunc = () => {
   console.log('done');
 };
-setTimeout(callbackFunc, 2000); //milisaniye
+setTimeout(callbackFunc, 2000); //2000 milliseconds
 setTimeout(() => console.log('done'), 2000);
 ```
 
-### Belirsiz sayida parametre alan fonksiyon
+### Unknown amount of parameters
 
 ```javascript
-let calc = (a, b, ...extra) => {
+let sum = (a, b, ...extra) => {
   if (a === undefined || b === undefined) {
     return 'error';
   }
@@ -117,19 +119,19 @@ let calc = (a, b, ...extra) => {
   return sum;
 };
 
-console.log(calc(3, 5, 8, 10, 20));
+console.log(sum(3, 5, 8, 10, 20));
 ```
 
-### Try-catch-finally kullanimi
+### Try-catch-finally
 
 ```javascript
-let deneme = () => console.log('Baglanmaya Calis');
+let deneme = () => console.log('Try to connect');
 try {
   deneme;
 } catch (e) {
-  console.log('Hata: ', e.toString().slice(11, 50));
+  console.log('Error: ', e.toString().slice(11, 50));
 } finally {
-  setTimeout(() => console.log('Baglanti kesildi'), 2000);
+  setTimeout(() => console.log('Connection lost'), 2000);
 }
 ```
 
