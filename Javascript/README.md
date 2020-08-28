@@ -14,22 +14,22 @@ console.log(a); //6
 console.log(b); //8
 ```
 
-### Bir dizinin ilk iki elemanini alma
+### Get first two element of an array
 
 ```javascript
-[b, a] = [...arr];
+[b, a] = [...arr]; //es6
 const [a, b] = [1, 2, 3, 4, 5, 6];
 console.log(a, b); // 1, 2
 ```
 
-### Her virgul bir elemani temsil ediyor, bu sekilde bir dizinin iceriginin bir kismi baska bir diziye aktarilabiliyor
+### Every comman represents an element of an array
 
 ```javascript
 const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
 console.log(a, b, c); // 1, 2, 5
 ```
 
-### Elemanlarin ilk ikisini a ve b degiskenlerine atanmasi, geri kalan elemanlarin ise arr dizisine doldurulmasi
+### Getting first #amount elements
 
 ```javascript
 const source = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -37,9 +37,9 @@ let arr, a, b;
 [a, b, ...arr] = source;
 ```
 
-### Arr arrayinin iceriginin belli bir kismini deger adli degisken ile doldurma
+### Filling an array with given value
 
-> arr.fill(deger, baslangic, son)
+> arr.fill(value, start, end)
 
 ### Diziye eleman ekleme ve cikarma
 
