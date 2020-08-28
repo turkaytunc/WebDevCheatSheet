@@ -41,13 +41,13 @@ let arr, a, b;
 
 > arr.fill(value, start, end)
 
-### Diziye eleman ekleme ve cikarma
+### Add or remove an element from end of an array
 
-> arr.push(deger), arr.pop()
+> arr.push(value), arr.pop()
 
-### Dizi iceriginde bir degeri arama, eleman bulunur ise bulundugu indexi dondurur, bulamaz ise -1 dondurur
+### Search a value in array. If it finds element return element. If it can not find given value in array returns -1
 
-> arr.indexOf(deger)
+> arr.indexOf(value)
 
 ### Dizi elemanlari arasina istenen karakterin eklenmesi
 
