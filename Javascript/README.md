@@ -85,7 +85,7 @@ arr.reverse();
 ### Array.find
 
 ```javascript
-arr.find((element) => element == 5); //finds array element which equals to five
+arr.find((element) => element == 5); //finds array element where element equals to five. returns first occurrence
 ```
 
 ### How to use forEach
