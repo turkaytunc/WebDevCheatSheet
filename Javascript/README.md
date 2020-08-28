@@ -536,3 +536,9 @@ sayHello(); // Missing parameters!!
 let params = encodeURIComponent('mango & pineapple');
 let url = 'http://mysite.com/?search=' + params; //http://mysite.com/?search=mango%20%26%20pineapple
 ```
+
+### String concat
+
+```javascript
+finalString = firstString.concat(secondString);
+```
