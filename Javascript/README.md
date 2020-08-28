@@ -84,7 +84,11 @@ arr.reverse();
 
 ### How to use forEach
 
-> arr.forEach(function(element, index){console.log(element, index)})
+```javascript
+arr.forEach(function (element, index) {
+  console.log(element, index);
+});
+```
 
 ### Iterating multidimensional array with forEach
 
