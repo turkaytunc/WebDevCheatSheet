@@ -39,19 +39,27 @@ let arr, a, b;
 
 ### Filling an array with given value
 
-> arr.fill(value, start, end)
+```javascript
+arr.fill(value, start, end);
+```
 
 ### Add or remove an element from end of an array
 
-> arr.push(value), arr.pop()
+```javascript
+arr.push(value), arr.pop();
+```
 
 ### Search a value in array. If it finds element return element. If it can not find given value in array returns -1
 
-> arr.indexOf(value)
+```javascript
+arr.indexOf(value);
+```
 
 ### Dizi elemanlari arasina istenen karakterin eklenmesi
 
-> arr.join(",")
+```javascript
+arr.join(',');
+```
 
 ### Slice string
 
