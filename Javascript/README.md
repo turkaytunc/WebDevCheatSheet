@@ -49,13 +49,13 @@ arr.fill(value, start, end);
 arr.push(value), arr.pop();
 ```
 
-### Search a value in array. If it finds element return element. If it can not find given value in array returns -1
+### Search a value in array. If it finds element returns element. If it can not find given value in array returns -1
 
 ```javascript
 arr.indexOf(value);
 ```
 
-### Dizi elemanlari arasina istenen karakterin eklenmesi
+### Adding value between array elements
 
 ```javascript
 arr.join(',');
@@ -69,9 +69,12 @@ arr.slice(start, end);
 arr.slice(-3);
 ```
 
-### Dizi elemanlarini siralama
+### Sort an array
 
-> arr.sort(function(a,b){ return a-b;})
+```javascript
+arr.sort((a, b) => a - b); //low to high
+arr.sort((a, b) => b - a); //high to low
+```
 
 ### Dizi elemanlarinin siralamasini tersine cevirme
 
