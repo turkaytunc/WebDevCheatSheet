@@ -98,7 +98,7 @@ arr.forEach(function(row){
     console.log(col);});
 ```
 
-### Asenkron callback
+### Asynchronous callback
 
 ```javascript
 let callbackFunc = () => {
@@ -126,7 +126,7 @@ let sum = (a, b, ...extra) => {
 console.log(sum(3, 5, 8, 10, 20));
 ```
 
-### Try-catch-finally
+### Try catch finally
 
 ```javascript
 let tryToConnect = () => console.log('Try to connect');
@@ -154,13 +154,13 @@ let newObject = new MyClass();
 console.log(newObject);
 ```
 
-## DOM kullanimi ve bazi methodlar
+## Document Object Model
 
-### Bir html tag'inin sahip oldugu class ve id ismini kullanarak secme
+### Select an html element with classname or id
 
 ```javascript
-let docID = document.getElementById('idAdi');
-let docClass = document.getElementByClassName('classAdi');
+let docID = document.getElementById('id');
+let docClass = document.getElementByClassName('class');
 
 console.log(docID);
 console.log(docClass);
