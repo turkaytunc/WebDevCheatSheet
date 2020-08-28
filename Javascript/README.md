@@ -53,9 +53,13 @@ let arr, a, b;
 
 > arr.join(",")
 
-### Dizinin bir kisminin ayrilmasi
+### Slice string
 
-> arr.slice(baslangic, bitis)
+```javascript
+arr.slice(start, end);
+//If a negative number is provided as the first parameter to slice() , the offset is taken backwards from the end of the string.
+arr.slice(-3);
+```
 
 ### Dizi elemanlarini siralama
 
