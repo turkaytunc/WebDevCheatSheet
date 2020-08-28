@@ -82,6 +82,12 @@ arr.sort((a, b) => b - a); //high to low
 arr.reverse();
 ```
 
+### Array.find
+
+```javascript
+arr.find((element) => element == 5); //finds array element which equals to five
+```
+
 ### How to use forEach
 
 ```javascript
