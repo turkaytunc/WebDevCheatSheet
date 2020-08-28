@@ -1,17 +1,17 @@
 # Javascript Cheatsheet
 
-## Bazi Fonksiyonlarin kullanimi ve notlar
+## Useful functions and notes
 
-### Degiskenlerin degerlerini birbirleri ile degistirme
+### Change variable values with eachother
 
 ```javascript
 let a = 8,
   b = 6;
 (() => {
   [b, a] = [a, b];
-})();
-console.log(a);
-console.log(b);
+})(); //extra parens for invoking function
+console.log(a); //6
+console.log(b); //8
 ```
 
 ### Bir dizinin ilk iki elemanini alma
