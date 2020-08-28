@@ -125,9 +125,9 @@ console.log(sum(3, 5, 8, 10, 20));
 ### Try-catch-finally
 
 ```javascript
-let deneme = () => console.log('Try to connect');
+let tryToConnect = () => console.log('Try to connect');
 try {
-  deneme;
+  tryToConnect;
 } catch (e) {
   console.log('Error: ', e.toString().slice(11, 50));
 } finally {
@@ -135,19 +135,19 @@ try {
 }
 ```
 
-## Siniflar
+## Classes
 
-### Sinif tanimi ve bu siniftan nesne olusturma
+### Creating class and object
 
 ```javascript
-class YeniSinif {
+class MyClass {
   constructor() {
-    console.log('nesne olusturuldu');
+    console.log('Object created!');
   }
 }
 
-let yeniNesne = new YeniSinif();
-console.log(yeniNesne);
+let newObject = new MyClass();
+console.log(newObject);
 ```
 
 ## DOM kullanimi ve bazi methodlar
