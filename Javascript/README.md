@@ -586,3 +586,26 @@ Dog.prototype = Object.create(Animal.prototype);
 
 let beagle = new Dog();
 ```
+
+### Inheritance using prototype with own constructor
+
+```js
+function Animal() {}
+
+//adding eat function
+Animal.prototype.eat = function () {
+  console.log('nom nom nom');
+};
+
+function Dog() {}
+
+Dog.prototype = Object.create(Animal.prototype); //inheriting from animal class
+Dog.prototype.constructor = Dog; //use Dog class constructor
+
+//adding bark function to Dog class
+Dog.prototype.bark = function () {
+  console.log('Woof!');
+};
+
+let beagle = new Dog();
+```
