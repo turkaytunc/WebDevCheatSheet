@@ -609,3 +609,26 @@ Dog.prototype.bark = function () {
 
 let beagle = new Dog();
 ```
+
+### Prototype mixin
+
+```js
+let bird = {
+  name: 'Kek',
+  numLegs: 2,
+};
+
+let boat = {
+  name: 'Oruc',
+  type: 'race-boat',
+};
+
+let glideMixin = function (obj) {
+  obj.glide = function () {
+    console.log('gliding');
+  };
+};
+
+glideMixin(bird);
+glideMixin(boat);
+```
