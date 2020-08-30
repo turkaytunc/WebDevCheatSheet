@@ -632,3 +632,15 @@ let glideMixin = function (obj) {
 glideMixin(bird);
 glideMixin(boat);
 ```
+
+### reducer
+
+```js
+
+function User() {
+const [user, setUser] = useReducer(
+(user, newDetails) => ({ ...user, ...newDetails }),
+firstUser
+);
+
+```
