@@ -644,3 +644,79 @@ firstUser
 );
 
 ```
+
+### Commonjs export
+
+```js
+//export
+const getName = () => {
+  return 'Mike';
+};
+
+exports.getName = getName;
+
+//import
+const user = require('./user');
+console.log(`User: ${user.getName()}`);
+```
+
+```js
+const getName = () => {
+  return 'Jim';
+};
+
+const getLocation = () => {
+  return 'Munich';
+};
+
+const dateOfBirth = '12.01.1982';
+
+exports.getName = getName;
+exports.getLocation = getLocation;
+exports.dob = dateOfBirth;
+```
+
+```js
+//export
+exports.getName = () => {
+  return 'Jim';
+};
+
+exports.getLocation = () => {
+  return 'Munich';
+};
+
+exports.dob = '12.01.1982';
+
+//import
+const { getName, dob } = require('./user');
+console.log(`${getName()} was born on ${dob}.`);
+```
+
+```js
+//export
+class User {
+  constructor(name, age, email) {
+    this.name = name;
+    this.age = age;
+    this.email = email;
+  }
+
+  getUserStats() {
+    return `
+      Name: ${this.name}
+      Age: ${this.age}
+      Email: ${this.email}
+    `;
+  }
+}
+
+module.exports = User;
+
+//import
+
+const User = require('./user');
+const jim = new User('Jim', 37, 'jim@example.com');
+
+console.log(jim.getUserStats());
+```
