@@ -790,5 +790,5 @@ function hide() {
 
 let bf = hide();
 
-console.log(hide().fullName);
+console.log(bf.fullName);
 ```
