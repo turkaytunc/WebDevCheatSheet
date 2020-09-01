@@ -19,7 +19,6 @@ grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
 ## transform-translate
 
 ```css
-
 @keyframes transform-translate {
   0% {
     transform: translateX(-100px);
@@ -42,7 +41,6 @@ grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
 ## transform-rotate
 
 ```css
-
 @keyframes transform-translate {
   0% {
     transform: rotate(0deg);
@@ -57,4 +55,3 @@ grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
   animation: transform-translate infinite 0.5s linear;
 }
 ```
-
