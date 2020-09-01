@@ -771,3 +771,24 @@ console.log(multipleByTwo(4));
 var multipleByThree = multiply.bind(this, 3);
 console.log(multipleByThree(4));
 ```
+
+### private fields
+
+```js
+function hide() {
+  let name = 'bilal';
+  let surname = 'ERDOGAN';
+
+  let nameObj = {
+    get fullName() {
+      return name + ' ' + surname;
+    },
+  };
+
+  return nameObj;
+}
+
+let bf = hide();
+
+console.log(hide().fullName);
+```
