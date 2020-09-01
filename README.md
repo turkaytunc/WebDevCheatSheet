@@ -1,6 +1,6 @@
 # Web Development Cheatsheet
 
-## HTML
+## :bulb: HTML
 
 [![HTML Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/blob/master/Images/HTML5-logo.png)](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/HTML)
 
