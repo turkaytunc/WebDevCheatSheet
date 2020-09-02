@@ -47,9 +47,10 @@
 - [Prototypal Inheritance](#Prototypal-Inheritance)
 - [Prototypal Inheritance binding constructor](#Prototypal-Inheritance-binding-constructor)
 - [Prototype mixin](#Prototype-mixin)
+- [useReducer](#useReducer)
+- [Commonjs import-export](#Commonjs-import-export)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
-- [Commonjs import-export](#Commonjs-import-export)
 
 ### Change variable values with eachother
 
