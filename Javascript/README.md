@@ -6,7 +6,7 @@
 - [Fill an array with given value](#Filling-an-array-with-given-value)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
-- [Commonjs import-export](#Commonjs-export)
+- [Commonjs import-export](#Commonjs-import-export)
 
 ### Change variable values with eachother
 
@@ -652,7 +652,7 @@ firstUser
 
 ```
 
-### Commonjs export
+### Commonjs import export
 
 ```js
 //export
