@@ -3,6 +3,8 @@
 ## Index
 
 - [Bind Call Apply](#bind-call-apply)
+- [Private fields](<#private\ fields>)
+- [Commonjs import-export](<#Commonjs\ export>)
 
 ### Change variable values with eachother
 
@@ -71,7 +73,7 @@ arr.slice(start, end);
 arr.slice(-3);
 ```
 
-### Sort an array
+### Sort array
 
 ```javascript
 //sorts numeric values
