@@ -4,6 +4,10 @@
 
 - [Change values between two variables](#Change-variable-values-with-eachother)
 - [Fill an array with given value](#Filling-an-array-with-given-value)
+- [Add or remove an element from end of an array](#Add-or-remove-an-element-from-end-of-an-array)
+- [Slice string](#Slice-string)
+- [Sort array](#Sort-array)
+- [Array.find](#Array.find)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Commonjs import-export](#Commonjs-import-export)
@@ -28,7 +32,7 @@ const [a, b] = [1, 2, 3, 4, 5, 6];
 console.log(a, b); // 1, 2
 ```
 
-### Every comman represents an element of an array
+### Every comma represents an element of an array
 
 ```javascript
 const [a, b, , , c] = [1, 2, 3, 4, 5, 6];
