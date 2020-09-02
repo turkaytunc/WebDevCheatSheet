@@ -34,7 +34,7 @@
 - [Filter function](#Filter-function)
 - [Reduce function](#Reduce-function)
 - [Currying](#Currying)
-- [Optional chaining operator "?."](#Optional-chaining-operator-"?.")
+- [Optional chaining operator "?."](#Optional-chaining-operator)
 - [Proper use of localstorage](#Proper-use-of-localstorage)
 - [Get current day's name or given date's name](#Get-current-days-name-or-given-dates-name)
 - [Bind Call Apply](#bind-call-apply)
@@ -453,7 +453,7 @@ console.log(sumElements([1, 3, -5])); // -1
 console.log(sumElements([4, -2, -1])); // 1
 ```
 
-### Optional chaining operator "?."
+### Optional chaining operator
 
 ```javascript
 // check if myObj.prop1 is defined before trying to access prop2
@@ -506,7 +506,7 @@ function getDayName(dateString) {
 }
 ```
 
-### distinct items from array
+### Distinct items from array
 
 ```javascript
 const colors = ['red', 'red', 'green', 'blue', 'green'];
