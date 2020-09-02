@@ -37,6 +37,16 @@
 - [Optional chaining operator "?."](#Optional-chaining-operator)
 - [Proper use of localstorage](#Proper-use-of-localstorage)
 - [Get current day's name or given date's name](#Get-current-days-name-or-given-dates-name)
+- [Distinct items from array with Set](#Distinct-items-from-array-with-reduce)
+- [Distinct items from array with Set](#Distinct-items-from-array-with-Set)
+- [Find deepest children in object](#Find-deepest-children-in-object)
+- [Wait x amount of seconds](#Wait-x-amount-of-seconds)
+- [Arguments keyword](#Arguments-keyword)
+- [URI encoding](#URI-encoding)
+- [Object prototype](#Object-prototype)
+- [Prototypal Inheritance](#Prototypal-Inheritance)
+- [Prototypal Inheritance binding constructor](#Prototypal-Inheritance-binding-constructor)
+- [Prototype mixin](#Prototype-mixin)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Commonjs import-export](#Commonjs-import-export)
@@ -506,7 +516,7 @@ function getDayName(dateString) {
 }
 ```
 
-### Distinct items from array
+### Distinct items from array with reduce
 
 ```javascript
 const colors = ['red', 'red', 'green', 'blue', 'green'];
@@ -518,7 +528,7 @@ const uniqueColors = colors.reduce(
 console.log(uniqueColors); // ["red", "green", "blue"]
 ```
 
-### Distinct items from array
+### Distinct items from array with Set
 
 ```javascript
 function findDistinct(nums) {
@@ -528,7 +538,7 @@ function findDistinct(nums) {
 }
 ```
 
-### Find deepest children in objects
+### Find deepest children in object
 
 ```javascript
 const deepPick = (fields, object = {}) => {
@@ -604,7 +614,7 @@ Dog.prototype = {
 };
 ```
 
-### Inheritance using prototype
+### Prototypal Inheritance
 
 ```js
 function Animal() {}
@@ -623,7 +633,7 @@ Dog.prototype = Object.create(Animal.prototype);
 let beagle = new Dog();
 ```
 
-### Inheritance using prototype with own constructor
+### Prototypal Inheritance binding constructor
 
 ```js
 function Animal() {}
