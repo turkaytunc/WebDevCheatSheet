@@ -1,6 +1,8 @@
 # Javascript Cheatsheet
 
-## Useful functions and notes
+## Index
+
+- [Bind Call Apply](#bind-call-apply)
 
 ### Change variable values with eachother
 
@@ -72,6 +74,7 @@ arr.slice(-3);
 ### Sort an array
 
 ```javascript
+//sorts numeric values
 arr.sort((a, b) => a - b); //low to high
 arr.sort((a, b) => b - a); //high to low
 ```
@@ -721,7 +724,7 @@ const jim = new User('Jim', 37, 'jim@example.com');
 console.log(jim.getUserStats());
 ```
 
-### bind-call-apply
+### Bind-call-apply
 
 ```js
 let person = {
