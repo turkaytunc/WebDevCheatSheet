@@ -1,6 +1,6 @@
-# Javascript Cheatsheet
+# 🎉 Javascript Cheatsheet
 
-## Index
+## 📝 Index
 
 - [Change values between two variables](#Change-variable-values-with-eachother)
 - [Fill an array with given value](#Filling-an-array-with-given-value)
@@ -21,6 +21,7 @@
   - [DOM change style](#DOM-change-style)
   - [Creating array from HTMLcollection](#Creating-array-from-HTMLcollection)
   - [Adding new node](#Adding-new-node)
+  - [Using EventListener](#Using-EventListener)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Commonjs import-export](#Commonjs-import-export)
@@ -258,7 +259,7 @@ let h1 = document.querySelector('header h1');
 container.insertBefore(newDiv, h1);
 ```
 
-### EventListener kullanimi
+### Using EventListener
 
 ```javascript
 document.getElementById('button').addEventListener('click', buttonClick);
