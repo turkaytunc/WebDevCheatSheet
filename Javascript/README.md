@@ -22,6 +22,16 @@
   - [Creating array from HTMLcollection](#Creating-array-from-HTMLcollection)
   - [Adding new node](#Adding-new-node)
   - [Using EventListener](#Using-EventListener)
+  - [EventListener mouse+keypress](#EventListener-mouse+keypress)
+- [Immediately invoked function expression](#Immediately-invoked-function-expression)
+- [Object destructuring](#Object-destructuring)
+- [Object destructuring inside an object](#Object-destructuring-inside-an-object)
+- [Custom type with functions](#Custom-type-with-functions)
+- [Importing modules](#Importing-modules)
+- [Higher order function](#Higher-order-function)
+- [Pure function - effect object](#Pure-function---effect-object)
+- [Pure function - effect array](#Pure-function---effect-array)
+- [Filter function](#Filter-function)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Commonjs import-export](#Commonjs-import-export)
@@ -269,7 +279,7 @@ function buttonClick() {
 }
 ```
 
-### EventListener ile mouse+tus seklinde bir kombinasyon ile tiklama
+### EventListener mouse+keypress
 
 ```javascript
 document.getElementById('button').addEventListener('click', buttonClick);
@@ -282,9 +292,7 @@ function buttonClick(e) {
 }
 ```
 
-## Ipucu
-
-### Fonksiyonun aninda invoke edilmesi
+### Immediately invoked function expression
 
 ```javascript
 (function sayHi() {
@@ -292,7 +300,7 @@ function buttonClick(e) {
 })(); // (fonk)() seklinde kullanilir
 ```
 
-### Nesne parcalama
+### Object destructuring
 
 ```javascript
 const address = {
@@ -301,11 +309,11 @@ const address = {
   country: '',
 };
 
-const { street: streetVarAlias, city, country } = address; // streetVarAlias ismi stree degisken ismi yerine kullanilmasi icin yazildi
+const { street: streetVarAlias, city, country } = address; // streetVarAlias
 console.log(streetVarAlias, city, country);
 ```
 
-### Icice olan nesneleri parcalama
+### Object destructuring inside an object
 
 ```javascript
 const regularPerson = {
@@ -322,7 +330,7 @@ const lordify = ({ spouse: { firstname } }) => {
 };
 ```
 
-### custom type with functions
+### Custom type with functions
 
 ```javascript
 function Vacation(destination, length) {
@@ -336,23 +344,21 @@ const maui = new Vacation('Maui', 7);
 maui.print(); // Maui | 7 days
 ```
 
-### importing modules
-
-You can scope module variables locally under different variable names
+### Importing modules
 
 ```javascript
+//You can scope module variables locally under different variable names
 import { print as p, log as l } from './text-helpers';
 p('printing a message');
 l('logging a message');
 ```
 
-You can also import everything into a single variable using \*:
-
 ```javascript
+//You can also import everything into a single variable using *:
 import * as fns from './text-helpers`
 ```
 
-### higher order function
+### Higher order function
 
 ```javascript
 const createScream = (logger) => (message) =>
@@ -364,7 +370,7 @@ scream('createScream returns a function');
 scream('scream invokes that returned function');
 ```
 
-### pure function - effect object
+### Pure function - effect object
 
 ```javascript
 let color_lawn = {
@@ -378,7 +384,7 @@ console.log(rateColor(color_lawn, 5).rating); // 5
 console.log(color_lawn.rating); // 0
 ```
 
-### pure function - effect array
+### Pure function - effect array
 
 ```javascript
 let list = [{ title: 'Rad Red' }, { title: 'Lawn' }, { title: 'PartyPink' }];
@@ -388,7 +394,7 @@ console.log(addColor('GlamGreen', list).length); // 4
 console.log(list.length); // 3
 ```
 
-### filter function
+### Filter function
 
 ```javascript
 const numbers = [10, 9, 8, 2, 7, 5, 1, 3, 0];
