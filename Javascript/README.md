@@ -32,6 +32,11 @@
 - [Pure function - effect object](#Pure-function---effect-object)
 - [Pure function - effect array](#Pure-function---effect-array)
 - [Filter function](#Filter-function)
+- [Reduce function](#Reduce-function)
+- [Currying](#Currying)
+- [Optional chaining operator (?.)](<#Optional-chaining-operator-(?.)>)
+- [Proper use of localstorage](#Proper-use-of-localstorage)
+- [Get current day's name or given date's name](#Get-current-day's-name-or-given-date's-name)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Commonjs import-export](#Commonjs-import-export)
@@ -416,7 +421,7 @@ console.log(filteredArray); // [2, 5, 1, 3, 0];
 console.log(numbers); // [10, 9, 8, 2, 7, 5, 1, 3, 0]
 ```
 
-### reduce function
+### Reduce function
 
 ```javascript
 var values = [1, 2, -3, -4, 5, 6];
@@ -428,7 +433,7 @@ const sumOfValues = values.map(Math.abs).reduce(sum, 0); // reduce(callback, ini
 console.log(sumOfValues);
 ```
 
-### currying
+### Currying
 
 ```javascript
 function curriedDot(vector1) {
@@ -448,7 +453,7 @@ console.log(sumElements([1, 3, -5])); // -1
 console.log(sumElements([4, -2, -1])); // 1
 ```
 
-### optional chaining operator (?.)
+### Optional chaining operator (?.)
 
 ```javascript
 // check if myObj.prop1 is defined before trying to access prop2
