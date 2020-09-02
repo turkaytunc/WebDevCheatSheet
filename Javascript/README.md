@@ -2,6 +2,8 @@
 
 ## Index
 
+- [Change values between two variables](#Change-variable-values-with-eachother)
+- [Fill an array with given value](#Filling-an-array-with-given-value)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Commonjs import-export](#Commonjs-export)
