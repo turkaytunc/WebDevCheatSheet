@@ -7,7 +7,7 @@
 - [Add or remove an element from end of an array](#Add-or-remove-an-element-from-end-of-an-array)
 - [Slice string](#Slice-string)
 - [Sort array](#Sort-array)
-- [Array.find](#Array.find)
+- [Array.find](#Array-find)
 - [How to use forEach](#How-to-use-forEach)
 - [Iterating multidimensional array with forEach](#Iterating-multidimensional-array-with-forEach)
 - [Asynchronous callback](#Asynchronous-callback)
@@ -22,7 +22,7 @@
   - [Creating array from HTMLcollection](#Creating-array-from-HTMLcollection)
   - [Adding new node](#Adding-new-node)
   - [Using EventListener](#Using-EventListener)
-  - [EventListener mouse+keypress](#EventListener-mouse+keypress)
+  - [EventListener mouse+keypress](#EventListener-mouse-keypress)
 - [Immediately invoked function expression](#Immediately-invoked-function-expression)
 - [Object destructuring](#Object-destructuring)
 - [Object destructuring inside an object](#Object-destructuring-inside-an-object)
@@ -133,7 +133,7 @@ arr.sort((a, b) => b - a); //high to low
 arr.reverse();
 ```
 
-### Array.find
+### Array find
 
 ```javascript
 arr.find((element) => element == 5); //finds array element where element equals to five. returns first occurrence
@@ -295,7 +295,7 @@ function buttonClick() {
 }
 ```
 
-### EventListener mouse+keypress
+### EventListener mouse keypress
 
 ```javascript
 document.getElementById('button').addEventListener('click', buttonClick);
