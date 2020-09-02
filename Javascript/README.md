@@ -679,7 +679,7 @@ glideMixin(bird);
 glideMixin(boat);
 ```
 
-### reducer
+### useReducer
 
 ```js
 
