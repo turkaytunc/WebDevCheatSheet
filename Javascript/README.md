@@ -17,6 +17,10 @@
 - [DOM](#Document-Object-Model)
   - [Select an html element with classname or id](#Select-an-html-element-with-classname-or-id)
   - [innerHTML - innerText - textContent](#innerHTML---innerText---textContent)
+  - [Useful properties](#Useful-properties)
+  - [DOM change style](#DOM-change-style)
+  - [Creating array from HTMLcollection](#Creating-array-from-HTMLcollection)
+  - [Adding new node](#Adding-new-node)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Commonjs import-export](#Commonjs-import-export)
@@ -197,12 +201,12 @@ console.log(docClass);
 ```javascript
 let doc = document.getElementById('id');
 
-doc.innerText = 'hi'; // sadece text icerik ile ilgilenir
-doc.textContent = 'hello'; // css stillerini de dikkate alir
-doc.innerHTML = `<p>hey</p>`; // cocuk uye olarak paragraf ekler
+doc.innerText = 'hi'; // only text content
+doc.textContent = 'hello'; // also includes css content
+doc.innerHTML = `<p>hey</p>`; // adds child
 ```
 
-### Sik kullanilan property'ler
+### Useful properties
 
 ```javascript
 let itemList = document.querySelector('#items');
@@ -215,15 +219,15 @@ console.log(itemList.firstElementChild);
 console.log(itemList.lastElementChild);
 ```
 
-### DOM style ile css ozelligi degistirme
+### DOM change style
 
 ```javascript
-let docClass = document.getElementByClassName('classAdi');
+let docClass = document.getElementByClassName('classname');
 
 docClass.style.border = 'solid 5px #111';
 ```
 
-### HTMLcollection'dan array uretme
+### Creating array from HTMLcollection
 
 ```javascript
 let doc = document.getElementsByClassName('list-group-item');
@@ -237,16 +241,16 @@ arr.forEach((element) => {
 });
 ```
 
-### Yeni bir node olusturup icerik ekleme
+### Adding new node
 
 ```javascript
 let newDiv = document.createElement('div');
 
-newDiv.className = 'yeniClass';
-newDiv.id = 'yeniID';
+newDiv.className = 'newClass';
+newDiv.id = 'newID';
 newDiv.setAttribute('type', 'input');
 
-newDiv.appendChild(document.createTextNode('Ana Sayfa'));
+newDiv.appendChild(document.createTextNode('Homepage'));
 
 let container = document.querySelector('header .container');
 let h1 = document.querySelector('header h1');
