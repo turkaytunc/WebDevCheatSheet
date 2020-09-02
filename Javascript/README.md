@@ -3,8 +3,8 @@
 ## Index
 
 - [Bind Call Apply](#bind-call-apply)
-- [Private fields](<#private\ fields>)
-- [Commonjs import-export](<#Commonjs\ export>)
+- [Private fields](#private-fields)
+- [Commonjs import-export](#Commonjs-export)
 
 ### Change variable values with eachother
 
