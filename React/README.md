@@ -1,5 +1,17 @@
 # React
 
+## 📝 Index
+
+- [Use State](#Use-State)
+- [useState with objects](#useState-with-objects)
+- [useEffect hook](#useEffect-hook)
+- [Conditionally run effect hook](#Conditionally-run-effect-hook)
+- [call useEffect once at start](#call-useEffect-once-at-start)
+- [useEffect cleanup](#useEffect-cleanup)
+- [Dependency Check in useEffect](#Dependency-Check-in-useEffect)
+- [Data fetch with hooks and async-await](#Data-fetch-with-hooks-and-async-await)
+- [Data fetch with hooks and axios with promises](#Data-fetch-with-hooks-and-axios-with-promises)
+
 ## Use State
 
 ```javascript
