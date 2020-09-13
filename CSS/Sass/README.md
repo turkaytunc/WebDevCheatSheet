@@ -55,3 +55,17 @@ grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
   animation: transform-translate infinite 0.5s linear;
 }
 ```
+
+## string interpolation
+
+```css
+//#{}
+$medium: 768px;
+$screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-aspect-ratio: 9 / 16)';
+
+@media #{$screen-medium-wide} {
+  body {
+    font-size: 20px;
+  }
+}
+```
