@@ -111,3 +111,23 @@ $screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-as
   @include rad(15px);
 }
 ```
+
+## If-Else
+
+```scss
+@mixin border-stroke($val) {
+  @if $val == light {
+    border: 1px solid black;
+  } @else if $val == medium {
+    border: 3px solid black;
+  } @else if $val == heavy {
+    border: 6px solid black;
+  } @else {
+    border: none;
+  }
+}
+
+.card-wrapper {
+  @include border-stroke(light);
+}
+```
