@@ -131,3 +131,21 @@ $screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-as
   @include border-stroke(light);
 }
 ```
+
+## For loop
+
+```scss
+// 12 included
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    width: 100%/12 * $i;
+  }
+}
+
+// 12 excluded
+@for $i from 1 to 12 {
+  .col-#{$i} {
+    width: 100%/12 * $i;
+  }
+}
+```
