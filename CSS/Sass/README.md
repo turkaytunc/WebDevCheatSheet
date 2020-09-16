@@ -149,3 +149,29 @@ $screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-as
   }
 }
 ```
+
+## Each
+
+```scss
+//set color to blue then red then green
+@each $color in blue, red, green {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+
+// Using with set/map
+
+$colors: (
+  color1: blue,
+  color2: red,
+  color3: green,
+);
+
+// Note that the $key variable is needed to reference the keys in the map. Otherwise, the compiled CSS would have color1, color2... in it.
+@each $key, $color in $colors {
+  .#{$color}-text {
+    color: $color;
+  }
+}
+```
