@@ -218,3 +218,19 @@ $red-color: red;
 
 @import 'variables'; // Dont use underscore and file extension
 ```
+
+## Extend
+
+```scss
+// Borrow properties using exdend keyword
+
+.info {
+  width: 200px;
+  border: 1px solid black;
+  margin: 0 auto;
+}
+.info-important {
+  @extend .info;
+  background-color: magenta;
+}
+```
