@@ -97,4 +97,17 @@ $screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-as
   @include link;
   @include special-border;
 }
+
+// Example
+
+@mixin rad($radius) {
+  -webkit-box-border-radius: $radius;
+  -moz-box-border-radius: $radius;
+  -ms-box-border-radius: $radius;
+  border-radius: $radius;
+}
+
+.card-wrapper {
+  @include rad(15px);
+}
 ```
