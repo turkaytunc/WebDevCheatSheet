@@ -195,3 +195,26 @@ $colors: (color1: blue, color2: black, color3: red);
 <div class="red-bg"></div>
 
 ```
+
+## While loop
+
+```scss
+$x: 1;
+@while $x < 13 {
+  .col-#{$x} {
+    width: 100%/12 * $x;
+  }
+  $x: $x + 1;
+}
+```
+
+## Partials
+
+```scss
+// In the _variables.scss
+$red-color: red;
+
+// In the main.scss file
+
+@import 'variables'; // Dont use underscore and file extension
+```
