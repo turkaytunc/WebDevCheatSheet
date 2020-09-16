@@ -69,3 +69,32 @@ $screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-as
   }
 }
 ```
+
+## Mixins
+
+```scss
+@mixin bordered($color, $width) {
+  border: $width solid $color;
+}
+
+.myArticle {
+  @include bordered(blue, 1px); // Call mixin with two values
+}
+
+.myNotes {
+  @include bordered(red, 2px); // Call mixin with two values
+}
+
+// With default values
+@mixin bordered($color: blue, $width: 1px) {
+  border: $width solid $color;
+}
+
+// Mixin includes other mixins
+
+@mixin special-text {
+  @include important-text;
+  @include link;
+  @include special-border;
+}
+```
