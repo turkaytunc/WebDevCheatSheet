@@ -1,24 +1,24 @@
 # CSS cheatsheet
 
-## sass compile
+## Sass compile
 
-```javascript
+```js
 sass --watch input.scss output.css
 ```
 
-```javascript
+```js
 sass --watch app/sass:public/stylesheets
 ```
 
-## grid auto resize
+## Grid auto resize
 
-```css
+```scss
 grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
 ```
 
-## transform-translate
+## Transform-translate
 
-```css
+```scss
 @keyframes transform-translate {
   0% {
     transform: translateX(-100px);
@@ -38,9 +38,9 @@ grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
 }
 ```
 
-## transform-rotate
+## Transform-rotate
 
-```css
+```scss
 @keyframes transform-translate {
   0% {
     transform: rotate(0deg);
@@ -56,10 +56,10 @@ grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
 }
 ```
 
-## string interpolation
+## String interpolation
 
-```css
-//#{}
+```scss
+// #{}
 $medium: 768px;
 $screen-medium-wide: 'only screen and (min-width: #{$medium}) and (max-device-aspect-ratio: 9 / 16)';
 
