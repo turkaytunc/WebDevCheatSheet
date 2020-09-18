@@ -51,6 +51,7 @@
 - [Commonjs import-export](#Commonjs-import-export)
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
+- [Factory function](#Factory-function)
 
 ### Change variable values with eachother
 
