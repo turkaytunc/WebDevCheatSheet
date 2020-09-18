@@ -839,3 +839,18 @@ let bf = hide();
 
 console.log(bf.fullName);
 ```
+
+### Factory function
+
+```js
+function Calculator(a = 5, b = 10) {
+  return {
+    sum: () => console.log(a + b),
+  };
+}
+
+Calculator(2, 3).sum(); // output 5
+
+// const calc = Calculator(2, 10);
+// calc.sum();
+```
