@@ -1,0 +1,20 @@
+{
+  "name": "webdevcheatsheet",
+  "version": "1.0.0",
+  "description": "Useful tips and tricks for web development",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "link": "sh link.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turkaytunc/WebDevCheatSheet.git"
+  },
+  "author": "Türkay Tunç",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/turkaytunc/WebDevCheatSheet/issues"
+  },
+  "homepage": "https://github.com/turkaytunc/WebDevCheatSheet#readme"
+}
