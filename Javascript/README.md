@@ -56,6 +56,8 @@
 - [Object composed from key-value](#Object-composed-from-key-value)
 - [Creates an array of unique values from all given arrays](#Creates-an-array-of-unique-values-from-all-given-arrays)
 - [Curry](#Curry)
+- [Creates a function that negates the result of the predicate](#Creates-a-function-that-negates-the-result-of-the-predicate)
+- [Partials](#Partials)
 
 ### Change variable values with eachother
 
