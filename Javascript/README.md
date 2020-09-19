@@ -53,6 +53,7 @@
 - [Private fields](#private-fields)
 - [Factory function](#Factory-function)
 - [Flatten array recursively](#Flatten-array-recursively)
+- [Object composed from key-value](#Object-composed-from-key-value)
 
 ### Change variable values with eachother
 
@@ -866,4 +867,13 @@ const flattenDeep = (arr) =>
     : [arr];
 
 flattenDeep([1, [[2], [3, [4]], 5]]); // => [1, 2, 3, 4, 5]
+```
+
+### Object composed from key-value
+
+```js
+Object.fromEntries([
+  ['a', 1],
+  ['b', 2],
+]); // => { 'a': 1, 'b': 2 }
 ```
