@@ -52,6 +52,7 @@
 - [Bind Call Apply](#bind-call-apply)
 - [Private fields](#private-fields)
 - [Factory function](#Factory-function)
+- [Flatten array recursively](#Flatten-array-recursively)
 
 ### Change variable values with eachother
 
