@@ -55,6 +55,7 @@
 - [Flatten array recursively](#Flatten-array-recursively)
 - [Object composed from key-value](#Object-composed-from-key-value)
 - [Creates an array of unique values from all given arrays](#Creates-an-array-of-unique-values-from-all-given-arrays)
+- [Curry](#Curry)
 
 ### Change variable values with eachother
 
@@ -885,4 +886,35 @@ Object.fromEntries([
 const union = (arr, ...args) => [...new Set(arr.concat(...args))];
 
 union([2], [1, 2], [1, 2]); // => [2, 1]
+```
+
+### Curry
+
+```js
+const curry = (func) => {
+  // define the number of expected arguments
+  const expectedArgs = func.length;
+  const curried = (...args) => {
+    // if enough arugments has been passed return the
+    // result of the function execution, otherwise
+    // continue adding arguments to the list
+    return args.length >= expectedArgs
+      ? func(...args)
+      : (...args2) => curried(...args.concat(args2));
+  };
+  return curried;
+};
+
+const abc = (a, b, c) => [a, b, c];
+
+const curried = curry(abc);
+
+curried(1)(2)(3);
+// => [1, 2, 3]
+
+curried(1, 2)(3);
+// => [1, 2, 3]
+
+curried(1, 2, 3);
+// => [1, 2, 3]
 ```
