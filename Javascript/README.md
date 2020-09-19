@@ -54,6 +54,7 @@
 - [Factory function](#Factory-function)
 - [Flatten array recursively](#Flatten-array-recursively)
 - [Object composed from key-value](#Object-composed-from-key-value)
+- [Creates an array of unique values from all given arrays](#Creates-an-array-of-unique-values-from-all-given-arrays)
 
 ### Change variable values with eachother
 
@@ -876,4 +877,12 @@ Object.fromEntries([
   ['a', 1],
   ['b', 2],
 ]); // => { 'a': 1, 'b': 2 }
+```
+
+### Creates an array of unique values from all given arrays
+
+```js
+const union = (arr, ...args) => [...new Set(arr.concat(...args))];
+
+union([2], [1, 2], [1, 2]); // => [2, 1]
 ```
