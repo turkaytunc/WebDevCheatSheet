@@ -855,3 +855,14 @@ Calculator(2, 3).sum(); // output 5
 // const calc = Calculator(2, 10);
 // calc.sum();
 ```
+
+### Flatten array recursively
+
+```js
+const flattenDeep = (arr) =>
+  Array.isArray(arr)
+    ? arr.reduce((a, b) => [...flattenDeep(a), ...flattenDeep(b)], [])
+    : [arr];
+
+flattenDeep([1, [[2], [3, [4]], 5]]); // => [1, 2, 3, 4, 5]
+```
