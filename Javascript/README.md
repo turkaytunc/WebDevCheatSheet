@@ -918,3 +918,23 @@ curried(1, 2)(3);
 curried(1, 2, 3);
 // => [1, 2, 3]
 ```
+
+### Creates a function that negates the result of the predicate
+
+```js
+const negate = (func) => (...args) => !func(...args);
+
+const isEven = (n) => n % 2 === (0)[(1, 2, 3, 4, 5, 6)].filter(negate(isEven)); // => [1, 3, 5]
+```
+
+### Partials
+
+```js
+const partial = (func, ...args) => (...furtherArgs) =>
+  func(...args, ...furtherArgs);
+
+const greet = (greeting, name) => `${greeting} ${name}`;
+
+const sayHelloTo = partial(greet, 'hello');
+sayHelloTo('fred'); // => 'hello fred'
+```
