@@ -5,6 +5,8 @@
 - [Classes](#Classes)
 - [Class inheritance](#Class-inheritance)
 - [Static variables](#Static-variables)
+- [Access Modifiers](#Access-Modifiers)
+- [Constructor shorthand](#Constructor-shorthand)
 
 ### Classes
 
@@ -53,4 +55,47 @@ class Something {
 var s1 = new Something();
 var s2 = new Something();
 console.log(Something.instances); // 2
+```
+
+### Access Modifiers
+
+```ts
+class FooBase {
+  public x: number;
+  private y: number;
+  protected z: number;
+}
+
+// EFFECT ON INSTANCES
+var foo = new FooBase();
+foo.x; // okay
+foo.y; // ERROR : private
+foo.z; // ERROR : protected
+
+// EFFECT ON CHILD CLASSES
+class FooChild extends FooBase {
+  constructor() {
+    super();
+    this.x; // okay
+    this.y; // ERROR: private
+    this.z; // okay
+  }
+}
+```
+
+### Constructor shorthand
+
+```ts
+class Foo {
+  x: number;
+  constructor(x: number) {
+    this.x = x;
+  }
+}
+
+// Code below this line does same thing as above
+
+class Foo {
+  constructor(public x: number) {}
+}
 ```
