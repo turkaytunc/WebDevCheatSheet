@@ -8,6 +8,7 @@
 - [Access Modifiers](#Access-Modifiers)
 - [Constructor shorthand](#Constructor-shorthand)
 - [Arrow function with classes](#Arrow-function-with-classes)
+- [Async error handling](#Async-error-handling)
 
 ### Classes
 
@@ -112,4 +113,23 @@ class Person {
 }
 var person = new Person(1);
 setTimeout(person.growOld, 1000);
+```
+
+### Async error handling
+
+```ts
+import fs = require('fs');
+function loadJSON(filename: string, cb: (error: Error) => void) {
+  fs.readFile(filename, function (err, data) {
+    if (err) return cb(err);
+    // Contain all your sync code in a try catch
+    try {
+      var parsed = JSON.parse(data);
+    } catch (err) {
+      return cb(err);
+    }
+    // except when you call the callback
+    return cb(null, parsed);
+  });
+}
 ```
