@@ -7,6 +7,7 @@
 - [Static variables](#Static-variables)
 - [Access Modifiers](#Access-Modifiers)
 - [Constructor shorthand](#Constructor-shorthand)
+- [Arrow function with classes](#Arrow-function-with-classes)
 
 ### Classes
 
@@ -98,4 +99,17 @@ class Foo {
 class Foo {
   constructor(public x: number) {}
 }
+```
+
+### Arrow function with classes
+
+```ts
+class Person {
+  constructor(public age: number) {}
+  growOld = () => {
+    this.age++;
+  };
+}
+var person = new Person(1);
+setTimeout(person.growOld, 1000);
 ```
