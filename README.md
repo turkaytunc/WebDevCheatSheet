@@ -15,3 +15,7 @@
 ## React
 
 [![React Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/blob/master/Images/react-logo.png)](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/React)
+
+## TypeScript
+
+[![TypeScript Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/blob/master/Images/typescript-logo.png)](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/TypeScript)
