@@ -225,15 +225,9 @@ async function foo() {
 
 ### Include exclude files using typescript config file
 
-```ts
-
+```json
 {
-"include":[
-"./folder"
-],
-"exclude":[
-"./folder/**/*.spec.ts",
-"./folder/someSubFolder"
-]
+  "include": ["./folder"],
+  "exclude": ["./folder/**/*.spec.ts", "./folder/someSubFolder"]
 }
 ```
