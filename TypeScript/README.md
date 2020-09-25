@@ -14,6 +14,8 @@
 - [Generator functions](#Generator-functions)
 - [Iterator next value injection](#Iterator-next-value-injection)
 - [Iterator throw error](#Iterator-throw-error)
+- [Async await](#Async-await)
+- [Include exclude files using typescript config file](#Include-exclude-files-using-typescript-config-file)
 
 ### Classes
 
@@ -206,4 +208,32 @@ var foo = iterator.next();
 console.log(foo.value); // foo
 // Resume execution throwing an exception 'bar'
 var nextThing = iterator.throw(new Error('bar'));
+```
+
+### Async await
+
+```ts
+async function foo() {
+  try {
+    var val = await getMeAPromise();
+    console.log(val);
+  } catch (err) {
+    console.log('Error: ', err.message);
+  }
+}
+```
+
+### Include exclude files using typescript config file
+
+```ts
+
+{
+"include":[
+"./folder"
+],
+"exclude":[
+"./folder/**/*.spec.ts",
+"./folder/someSubFolder"
+]
+}
 ```
