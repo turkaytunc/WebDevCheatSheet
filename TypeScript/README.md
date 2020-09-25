@@ -10,6 +10,7 @@
 - [Arrow function with classes](#Arrow-function-with-classes)
 - [Async error handling](#Async-error-handling)
 - [Return promise](#Return-promise)
+- [Nodejs promise returning function](#Nodejs-promise-returning-function)
 
 ### Classes
 
@@ -147,4 +148,12 @@ function readFileAsync(filename: string): Promise<any> {
     });
   });
 }
+```
+
+### Nodejs promise returning function
+
+```ts
+import fs from 'fs';
+import util from 'util';
+const readFile = util.promisify(fs.readFile);
 ```
