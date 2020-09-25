@@ -11,6 +11,9 @@
 - [Async error handling](#Async-error-handling)
 - [Return promise](#Return-promise)
 - [Nodejs promise returning function](#Nodejs-promise-returning-function)
+- [Generator functions](#Generator-functions)
+- [Iterator next value injection](#Iterator-next-value-injection)
+- [Iterator throw error](#Iterator-throw-error)
 
 ### Classes
 
@@ -156,4 +159,51 @@ function readFileAsync(filename: string): Promise<any> {
 import fs from 'fs';
 import util from 'util';
 const readFile = util.promisify(fs.readFile);
+```
+
+### Generator functions
+
+```ts
+function* idMaker() {
+  let index = 0;
+  while (index < 3) yield index++;
+}
+let gen = idMaker();
+console.log(gen.next()); // { value: 0, done: false }
+console.log(gen.next()); // { value: 1, done: false }
+console.log(gen.next()); // { value: 2, done: false }
+console.log(gen.next()); // { done: true }
+```
+
+### Iterator next value injection
+
+```ts
+function* generator() {
+  const bar = yield 'foo'; // bar may be *any* type
+  console.log(bar); // bar!
+}
+const iterator = generator();
+// Start execution till we get first yield value
+const foo = iterator.next();
+console.log(foo.value); // foo
+// Resume execution injecting bar
+const nextThing = iterator.next('bar');
+```
+
+### Iterator throw error
+
+```ts
+function* generator() {
+  try {
+    yield 'foo';
+  } catch (err) {
+    console.log(err.message); // bar!
+  }
+}
+var iterator = generator();
+// Start execution till we get first yield value
+var foo = iterator.next();
+console.log(foo.value); // foo
+// Resume execution throwing an exception 'bar'
+var nextThing = iterator.throw(new Error('bar'));
 ```
