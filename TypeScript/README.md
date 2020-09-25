@@ -9,6 +9,7 @@
 - [Constructor shorthand](#Constructor-shorthand)
 - [Arrow function with classes](#Arrow-function-with-classes)
 - [Async error handling](#Async-error-handling)
+- [Return promise](#Return-promise)
 
 ### Classes
 
@@ -130,6 +131,20 @@ function loadJSON(filename: string, cb: (error: Error) => void) {
     }
     // except when you call the callback
     return cb(null, parsed);
+  });
+}
+```
+
+### Return promise
+
+```ts
+import fs = require('fs');
+function readFileAsync(filename: string): Promise<any> {
+  return new Promise((resolve, reject) => {
+    fs.readFile(filename, (err, result) => {
+      if (err) reject(err);
+      else resolve(result);
+    });
   });
 }
 ```
