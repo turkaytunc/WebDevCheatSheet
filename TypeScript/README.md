@@ -20,6 +20,7 @@
 - [EsModules import](#EsModules-import)
 - [Default exports imports](#Default-exports-imports)
 - [Declare a module globally](#Declare-a-module-globally)
+- [Namespaces](#Namespaces)
 
 ### Classes
 
@@ -289,11 +290,26 @@ import someLocalNameForThisFile from '../foo'; // Doesn't contain {}
 ```ts
 // global.d.ts
 declare module 'foo' {
-  // Some variable declarations
-  export var bar: number; /*sample*/
+  export var bar: number;
 }
 
 // anyOtherTsFileInYourProject.ts
-import * as foo from 'foo'; // TypeScript assumes (without doing any lookup) that
-// foo is {bar:number}
+import * as foo from 'foo'; // TypeScript assumes (without doing any lookup) that foo is {bar:number}
+```
+
+### Namespaces
+
+```ts
+namespace Utility {
+  export function log(msg) {
+    console.log(msg);
+  }
+  export function error(msg) {
+    console.error(msg);
+  }
+}
+
+// Usage
+Utility.log('Call me');
+Utility.error('maybe!');
 ```
