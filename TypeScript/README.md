@@ -17,6 +17,8 @@
 - [Async await](#Async-await)
 - [Include exclude files using typescript config file](#Include-exclude-files-using-typescript-config-file)
 - [EsModules export](#EsModules-export)
+- [EsModules import](#EsModules-import)
+- [Default exports imports](#Default-exports-imports)
 
 ### Classes
 
@@ -252,4 +254,31 @@ export { someVar, SomeType };
 
 let someVar = 53;
 export { someVar as aDifferentName };
+```
+
+### EsModules import
+
+```ts
+import { someVar, SomeType } from './foo';
+
+// import with renaming
+
+import { someVar as aDifferentName } from './foo';
+
+// import everything
+
+import * as foo from './foo';
+```
+
+### Default exports imports
+
+```ts
+// some var
+export default someVar = 123;
+// OR Some function
+export default function someFunction() {}
+// OR Some class
+export default class SomeClass {}
+
+import someLocalNameForThisFile from '../foo'; // Doesn't contain {}
 ```
