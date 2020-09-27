@@ -24,6 +24,7 @@
 - [Interfaces](#Interfaces)
 - [Tuples](#Tuples)
 - [Intersection types](#Intersection-types)
+- [Type alias](#Type-alias)
 
 ### Classes
 
@@ -344,4 +345,18 @@ const x = extend({ a: 'hello' }, { b: 42 });
 // x now has both `a` and `b`
 const a = x.a;
 const b = x.b;
+```
+
+### Type alias
+
+```ts
+type StrOrNum = string | number;
+
+// Usage: just like any other notation
+var sample: StrOrNum;
+
+sample = 123;
+sample = '123';
+
+sample = true; // Error!
 ```
