@@ -19,6 +19,7 @@
 - [EsModules export](#EsModules-export)
 - [EsModules import](#EsModules-import)
 - [Default exports imports](#Default-exports-imports)
+- [Declare a module globally](#Declare-a-module-globally)
 
 ### Classes
 
@@ -281,4 +282,18 @@ export default function someFunction() {}
 export default class SomeClass {}
 
 import someLocalNameForThisFile from '../foo'; // Doesn't contain {}
+```
+
+### Declare a module globally
+
+```ts
+// global.d.ts
+declare module 'foo' {
+  // Some variable declarations
+  export var bar: number; /*sample*/
+}
+
+// anyOtherTsFileInYourProject.ts
+import * as foo from 'foo'; // TypeScript assumes (without doing any lookup) that
+// foo is {bar:number}
 ```
