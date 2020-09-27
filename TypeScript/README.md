@@ -16,6 +16,7 @@
 - [Iterator throw error](#Iterator-throw-error)
 - [Async await](#Async-await)
 - [Include exclude files using typescript config file](#Include-exclude-files-using-typescript-config-file)
+- [EsModules export](#EsModules-export)
 
 ### Classes
 
@@ -230,4 +231,25 @@ async function foo() {
   "include": ["./folder"],
   "exclude": ["./folder/**/*.spec.ts", "./folder/someSubFolder"]
 }
+```
+
+### EsModules export
+
+```ts
+export let someVar = 100;
+export type SomeType = {
+  foo: number;
+};
+
+// or
+let someVar = 23;
+type SomeType = {
+  foo: string;
+};
+export { someVar, SomeType };
+
+// with renaming
+
+let someVar = 53;
+export { someVar as aDifferentName };
 ```
