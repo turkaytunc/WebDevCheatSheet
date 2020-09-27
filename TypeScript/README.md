@@ -22,6 +22,8 @@
 - [Declare a module globally](#Declare-a-module-globally)
 - [Namespaces](#Namespaces)
 - [Interfaces](#Interfaces)
+- [Tuples](#Tuples)
+- [Intersection types](#Intersection-types)
 
 ### Classes
 
@@ -324,4 +326,22 @@ interface Name {
 }
 
 let name: Name;
+```
+
+### Tuples
+
+```ts
+let nameNumber: [string, number];
+```
+
+### Intersection types
+
+```ts
+function extend<T, U>(first: T, second: U): T & U {
+  return { ...first, ...second };
+}
+const x = extend({ a: 'hello' }, { b: 42 });
+// x now has both `a` and `b`
+const a = x.a;
+const b = x.b;
 ```
