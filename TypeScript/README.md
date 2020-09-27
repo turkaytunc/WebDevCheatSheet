@@ -21,6 +21,7 @@
 - [Default exports imports](#Default-exports-imports)
 - [Declare a module globally](#Declare-a-module-globally)
 - [Namespaces](#Namespaces)
+- [Interfaces](#Interfaces)
 
 ### Classes
 
@@ -312,4 +313,15 @@ namespace Utility {
 // Usage
 Utility.log('Call me');
 Utility.error('maybe!');
+```
+
+### Interfaces
+
+```ts
+interface Name {
+  first: string;
+  second: string;
+}
+
+let name: Name;
 ```
