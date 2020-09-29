@@ -12,6 +12,9 @@
 - [Data fetch with hooks and async-await](#Data-fetch-with-hooks-and-async-await)
 - [Data fetch with hooks and axios with promises](#Data-fetch-with-hooks-and-axios-with-promises)
 
+- [Redux](#Redux)
+  - [Redux simple example](#Redux-simple-example)
+
 ## Use State
 
 ```javascript
@@ -276,4 +279,34 @@ export const EffectHook = () => {
     </div>
   );
 };
+```
+
+### Redux
+
+### Redux simple example
+
+```js
+const INCREMENT = 'INCREMENT';
+const DECREMENT = 'DECREMENT';
+
+const counterReducer = (state = 0, action) => {
+  switch (action.type) {
+    case INCREMENT:
+      return state + 1;
+    case DECREMENT:
+      return state - 1;
+    default:
+      return state;
+  }
+};
+
+const incAction = () => {
+  return { type: INCREMENT };
+};
+
+const decAction = () => {
+  return { type: DECREMENT };
+};
+
+const store = Redux.createStore(counterReducer);
 ```
