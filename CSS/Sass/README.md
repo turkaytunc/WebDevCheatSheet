@@ -13,7 +13,17 @@ sass --watch app/sass:public/stylesheets
 ## Grid auto resize
 
 ```scss
-grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+.grid-container {
+  grid-template-columns: repeat(auto-fill, minmax(auto, 1fr));
+}
+```
+
+```scss
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 10px;
+}
 ```
 
 ## Transform-translate
