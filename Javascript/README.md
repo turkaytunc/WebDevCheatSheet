@@ -58,6 +58,9 @@
 - [Curry](#Curry)
 - [Creates a function that negates the result of the predicate](#Creates-a-function-that-negates-the-result-of-the-predicate)
 - [Partials](#Partials)
+- [D3 library](#D3-Library)
+  - [D3 select and selectAll](#D3-select-and-selectAll)
+  - [D3 style and append](#D3-style-and-append)
 
 ### Change variable values with eachother
 
@@ -939,4 +942,26 @@ const greet = (greeting, name) => `${greeting} ${name}`;
 
 const sayHelloTo = partial(greet, 'hello');
 sayHelloTo('fred'); // => 'hello fred'
+```
+
+### D3 Library
+
+### D3 select and selectAll
+
+```js
+d3.select('body').selectAll('h2').text('hello world!');
+```
+
+### D3 style and append
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+d3.select('body')
+  .selectAll('h2')
+  .data(dataset)
+  .enter()
+  .append('h2')
+  .style('color', (d) => (d < 20 ? 'red' : 'green'))
+  .text((d) => d + ' USD');
 ```
