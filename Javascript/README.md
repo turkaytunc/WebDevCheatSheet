@@ -69,6 +69,7 @@
   - [Adding text to chart using text attribute of rect](#Adding-text-to-chart-using-text-attribute-of-rect)
   - [Coloring rect text](#Coloring-rect-text)
   - [Adding tooltip to chart bars with appending title](#Adding-tooltip-to-chart-bars-with-appending-title)
+  - [Drawing circles](#Drawing-circles)
 
 ### Change variable values with eachother
 
@@ -1176,4 +1177,35 @@ svg
   .text((d) => d)
   .attr('x', (d, i) => i * 30)
   .attr('y', (d, i) => h - (d * 3 + 3));
+```
+
+### Drawing circles
+
+```js
+const dataset = [
+  [34, 78],
+  [109, 280],
+  [310, 120],
+  [79, 411],
+  [420, 220],
+  [233, 145],
+  [333, 96],
+  [222, 333],
+  [78, 320],
+  [21, 123],
+];
+
+const w = 500;
+const h = 500;
+
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h);
+
+svg
+  .selectAll('circle')
+  .data(dataset)
+  .enter()
+  .append('circle')
+  .attr('cx', (d) => d[0]) // Circle x coordinate : origin(0,0) top-left corner of screen
+  .attr('cy', (d) => h - d[1]) // Circle y coordinate : origin(0,0) top-left corner of screen : because of that we are subtracting value from total height
+  .attr('r', 10); // radius
 ```
