@@ -63,6 +63,7 @@
   - [D3 style and append](#D3-style-and-append)
   - [D3 attr function and add class dynamically](#D3-attr-function-and-add-class-dynamically)
   - [D3 basic use case](#D3-basic-use-case)
+  - [D3 adding rectangle](#D3-adding-rectangle)
 
 ### Change variable values with eachother
 
@@ -1002,4 +1003,24 @@ d3.select('body')
   .append('div')
   .attr('class', 'bar')
   .style('height', (d) => d * 10 + 'px');
+```
+
+### D3 adding rectangle
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+const w = 500;
+const h = 100;
+
+const svg = d3
+  .select('body')
+  .append('svg')
+  .attr('width', w) // Width of svg element
+  .attr('height', h) // Height of svg element
+  .append('rect') // Add rectangle
+  .attr('width', '25px') // Rectangle width
+  .attr('height', '100px') // Rectangle height
+  .attr('x', '0') // Rectangle offset x : origin point is top-left corner
+  .attr('y', '0'); // Rectangle offset y : origin point is top-left corner
 ```
