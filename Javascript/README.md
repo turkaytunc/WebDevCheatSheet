@@ -64,6 +64,7 @@
   - [D3 attr function and add class dynamically](#D3-attr-function-and-add-class-dynamically)
   - [D3 basic use case](#D3-basic-use-case)
   - [D3 adding rectangle](#D3-adding-rectangle)
+  - [Creating bar chart using data](#Creating-bar-chart-using-data)
 
 ### Change variable values with eachother
 
@@ -1023,4 +1024,29 @@ const svg = d3
   .attr('height', '100px') // Rectangle height
   .attr('x', '0') // Rectangle offset x : origin point is top-left corner
   .attr('y', '0'); // Rectangle offset y : origin point is top-left corner
+```
+
+### Creating bar chart using data
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+const w = 500;
+const h = 100;
+
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h);
+
+svg
+  .selectAll('rect')
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr('x', (d, i) => {
+    return i * 30;
+  })
+  .attr('y', (d, i) => {
+    return d;
+  })
+  .attr('width', 25)
+  .attr('height', 100);
 ```
