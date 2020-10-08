@@ -67,6 +67,7 @@
   - [Creating bar chart using data](#Creating-bar-chart-using-data)
   - [Change svg color using fill attribute](#Change-svg-color-using-fill-attribute)
   - [Adding text to chart using text attribute of rect](#Adding-text-to-chart-using-text-attribute-of-rect)
+  - [Coloring rect text](#Coloring-rect-text)
 
 ### Change variable values with eachother
 
@@ -1107,4 +1108,37 @@ svg
   .attr('x', (d, i) => i * 30)
   .attr('y', (d, i) => h - 3 * d - 3)
   .text((d) => d);
+```
+
+### Coloring rect text
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+const w = 500;
+const h = 200;
+
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h);
+
+svg
+  .selectAll('rect')
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d)
+  .attr('width', 25)
+  .attr('height', (d, i) => d * 3)
+  .attr('fill', 'aqua'); // You can use style('fill', 'aqua')
+
+svg
+  .selectAll('text')
+  .data(dataset)
+  .enter()
+  .append('text')
+  .text((d) => d)
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d - 3)
+  .style('font-size', '25px')
+  .style('fill', 'red'); // attr('fill', 'red') also works
 ```
