@@ -70,6 +70,7 @@
   - [Coloring rect text](#Coloring-rect-text)
   - [Adding tooltip to chart bars with appending title](#Adding-tooltip-to-chart-bars-with-appending-title)
   - [Drawing circles](#Drawing-circles)
+  - [Adding label to circles](#Adding-label-to-circles)
 
 ### Change variable values with eachother
 
@@ -1208,4 +1209,47 @@ svg
   .attr('cx', (d) => d[0]) // Circle x coordinate : origin(0,0) top-left corner of screen
   .attr('cy', (d) => h - d[1]) // Circle y coordinate : origin(0,0) top-left corner of screen : because of that we are subtracting value from total height
   .attr('r', 10); // radius
+```
+
+### Adding label to circles
+
+```js
+const dataset = [
+  [34, 78],
+  [109, 280],
+  [310, 120],
+  [79, 411],
+  [420, 220],
+  [233, 145],
+  [333, 96],
+  [222, 333],
+  [78, 320],
+  [21, 123],
+];
+
+const w = 500;
+const h = 500;
+
+// Create svg
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h);
+
+// Create circle
+svg
+  .selectAll('circle')
+  .data(dataset)
+  .enter()
+  .append('circle')
+  .attr('cx', (d, i) => d[0])
+  .attr('cy', (d, i) => h - d[1])
+  .attr('r', 5);
+
+// Append Text
+svg
+  .selectAll('text')
+  .data(dataset)
+  .enter()
+  .append('text')
+  .attr('x', (d) => d[0] + 5)
+  .attr('y', (d) => h - d[1])
+  .text((d) => `${d[0]},${d[1]}`);
 ```
