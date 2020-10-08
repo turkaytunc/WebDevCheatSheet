@@ -61,6 +61,8 @@
 - [D3 library](#D3-Library)
   - [D3 select and selectAll](#D3-select-and-selectAll)
   - [D3 style and append](#D3-style-and-append)
+  - [D3 attr function and add class dynamically](#D3-attr-function-and-add-class-dynamically)
+  - [D3 basic use case](#D3-basic-use-case)
 
 ### Change variable values with eachother
 
@@ -964,4 +966,40 @@ d3.select('body')
   .append('h2')
   .style('color', (d) => (d < 20 ? 'red' : 'green'))
   .text((d) => d + ' USD');
+```
+
+### D3 attr function and add class dynamically
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+d3.select('body')
+  .selectAll('div')
+  .data(dataset)
+  .enter()
+  .append('div')
+  .attr('class', 'bar');
+```
+
+### D3 basic use case
+
+```scss
+.bar {
+  width: 25px;
+  height: 100px;
+  margin: 2px;
+  display: inline-block;
+  background-color: blue;
+}
+```
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+d3.select('body')
+  .selectAll('div')
+  .data(dataset)
+  .enter()
+  .append('div')
+  .attr('class', 'bar')
+  .style('height', (d) => d * 10 + 'px');
 ```
