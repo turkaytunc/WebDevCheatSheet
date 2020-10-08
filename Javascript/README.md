@@ -65,6 +65,7 @@
   - [D3 basic use case](#D3-basic-use-case)
   - [D3 adding rectangle](#D3-adding-rectangle)
   - [Creating bar chart using data](#Creating-bar-chart-using-data)
+  - [Change svg color using fill attribute](#Change-svg-color-using-fill-attribute)
 
 ### Change variable values with eachother
 
@@ -1049,4 +1050,26 @@ svg
   })
   .attr('width', 25)
   .attr('height', 100);
+```
+
+### Change svg color using fill attribute
+
+```js
+const dataset = [12, 31, 22, 17, 25, 18, 29, 14, 9];
+
+const w = 500;
+const h = 100;
+
+const svg = d3.select('body').append('svg').attr('width', w).attr('height', h);
+
+svg
+  .selectAll('rect')
+  .data(dataset)
+  .enter()
+  .append('rect')
+  .attr('x', (d, i) => i * 30)
+  .attr('y', (d, i) => h - 3 * d)
+  .attr('width', 25)
+  .attr('height', (d, i) => 3 * d)
+  .attr('fill', (d) => (d > 20 ? 'red' : 'blue'));
 ```
