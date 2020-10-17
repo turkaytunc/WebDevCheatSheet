@@ -8,6 +8,7 @@
   - [post request](#post-request)
   - [static file and bodyparser middleware](#static-file-and-bodyparser-middleware)
   - [environment variables](#environment-variables)
+  - [middleware chaining using next function](#middleware-chaining-using-next-function)
 
 - [QueryStrings](#QueryStrings)
 
@@ -65,6 +66,17 @@ app.get('/json', (req, res) => {
 });
 ```
 
+### middleware chaining using next function
+
+````js
+app.get('/now', (req, res, next)=>{
+  req.time = new Date().toString();
+  next();
+}, (req, res, next)=>{
+  res.send({time: req.time});
+})
+```
+
 ### QueryStrings
 
 ### url parse
@@ -89,7 +101,7 @@ path: '/?first=kevin&last=smith',
 href: 'http://example.com/?first=kevin&last=smith'
 }
 
-```
+````
 
 ### querystring parse
 
