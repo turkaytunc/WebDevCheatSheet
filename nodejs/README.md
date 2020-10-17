@@ -4,14 +4,25 @@
 
 - [Express server](#Express-server)
 
+  - [get request](#get-request)
   - [post request](#post-request)
 
 - [QueryStrings](#QueryStrings)
+
   - [url parse](#url-parse)
   - [querystring parse](#querystring-parse)
   - [querystring stringify](#querystring-stringify)
 
 ### Express server
+
+### get request
+
+```js
+let app = require('express')();
+app.get('/', function (req, res) {
+  res.send('Hello Express');
+});
+```
 
 ### post request
 
@@ -22,12 +33,12 @@ app.post('/name', (req, res) => {
 });
 ```
 
-### get reques
+### serve html file
 
 ```js
 let app = require('express')();
-app.get('/', function (req, res) {
-  res.send('Hello Express');
+app.get('/', (req, res) => {
+  res.sendFile(`${__dirname}/views/index.html`);
 });
 ```
 
