@@ -6,6 +6,8 @@
 
   - [get request](#get-request)
   - [post request](#post-request)
+  - [static file and bodyparser middleware](#static-file-and-bodyparser-middleware)
+  - [environment variables](#environment-variables)
 
 - [QueryStrings](#QueryStrings)
 
@@ -39,6 +41,27 @@ app.post('/name', (req, res) => {
 let app = require('express')();
 app.get('/', (req, res) => {
   res.sendFile(`${__dirname}/views/index.html`);
+});
+```
+
+### static file and bodyparser middleware
+
+```js
+app.use(express.static(`${__dirname}/public`));
+app.use(bodyParser.urlencoded({ extended: false }));
+```
+
+### environment variables
+
+```js
+// Use the .env file to configure the app
+
+app.get('/json', (req, res) => {
+  const message =
+    process.env.MESSAGE_STYLE === 'uppercase'
+      ? 'Hello json'.toUpperCase()
+      : 'Hello json';
+  res.json({ message: message });
 });
 ```
 
