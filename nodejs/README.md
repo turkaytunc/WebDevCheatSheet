@@ -2,10 +2,34 @@
 
 ## :pencil: Index
 
+- [Express server](#Express-server)
+
+  - [post request](#post-request)
+
 - [QueryStrings](#QueryStrings)
   - [url parse](#url-parse)
   - [querystring parse](#querystring-parse)
   - [querystring stringify](#querystring-stringify)
+
+### Express server
+
+### post request
+
+```js
+let app = require('express')();
+app.post('/name', (req, res) => {
+  res.json({ name: `${req.body.first} ${req.body.last}` });
+});
+```
+
+### get reques
+
+```js
+let app = require('express')();
+app.get('/', function (req, res) {
+  res.send('Hello Express');
+});
+```
 
 ### QueryStrings
 
