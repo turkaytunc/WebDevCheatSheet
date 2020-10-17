@@ -9,6 +9,8 @@
   - [static file and bodyparser middleware](#static-file-and-bodyparser-middleware)
   - [environment variables](#environment-variables)
   - [middleware chaining using next function](#middleware-chaining-using-next-function)
+  - [route parameters](#route-parameters)
+  - [query parameters](#query-parameters)
 
 - [QueryStrings](#QueryStrings)
 
@@ -48,6 +50,7 @@ app.get('/', (req, res) => {
 ### static file and bodyparser middleware
 
 ```js
+let app = require('express')();
 app.use(express.static(`${__dirname}/public`));
 app.use(bodyParser.urlencoded({ extended: false }));
 ```
@@ -56,7 +59,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 ```js
 // Use the .env file to configure the app
-
+let app = require('express')();
 app.get('/json', (req, res) => {
   const message =
     process.env.MESSAGE_STYLE === 'uppercase'
@@ -68,13 +71,37 @@ app.get('/json', (req, res) => {
 
 ### middleware chaining using next function
 
-````js
-app.get('/now', (req, res, next)=>{
-  req.time = new Date().toString();
-  next();
-}, (req, res, next)=>{
-  res.send({time: req.time});
-})
+```js
+let app = require('express')();
+app.get(
+  '/now',
+  (req, res, next) => {
+    req.time = new Date().toString();
+    next();
+  },
+  (req, res, next) => {
+    res.send({ time: req.time });
+  }
+);
+```
+
+### route parameters
+
+```js
+let app = require('express')();
+app.get('/:word/echo', (req, res) => {
+  res.send({ echo: req.params.word });
+});
+```
+
+### query parameters
+
+```js
+// /name?first=<firstname>&last=<lastname>
+let app = require('express')();
+app.get('/name', (req, res) => {
+  res.json({ name: `${req.query.first} ${req.query.last}` });
+});
 ```
 
 ### QueryStrings
@@ -101,7 +128,7 @@ path: '/?first=kevin&last=smith',
 href: 'http://example.com/?first=kevin&last=smith'
 }
 
-````
+```
 
 ### querystring parse
 
