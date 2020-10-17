@@ -22,4 +22,4 @@
 
 ## Nodejs
 
-[![Nodejs Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/blob/master/Images/nodejs-logo.png)](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/Nodejs)
+[![Nodejs Cheatsheet](https://github.com/turkaytunc/WebDevCheatSheet/blob/master/Images/nodejs-logo.png)](https://github.com/turkaytunc/WebDevCheatSheet/tree/master/nodejs)
