@@ -3,13 +3,17 @@
 ## :pencil: Index
 
 - [QueryStrings](#QueryStrings)
+  - [url parse](#url-parse)
+  - [querystring parse](#querystring-parse)
+  - [querystring stringify](#querystring-stringify)
 
 ### QueryStrings
+
+### url parse
 
 ```js
 // "http://example.com/?first=kevin&last=smith";
 let parsedURL = url.parse(request.url);
-let parsedParams = querystring.parse(parsedURL);
 
 // Output of url.parse(request.url);
 {
@@ -27,7 +31,26 @@ path: '/?first=kevin&last=smith',
 href: 'http://example.com/?first=kevin&last=smith'
 }
 
-// Output of querystring.parse(parsedURL);
+```
 
+### querystring parse
+
+```js
+// "http://example.com/?first=kevin&last=smith";
+let parsedURL = url.parse(request.url);
+
+let parsedParams = querystring.parse(parsedURL);
+
+// Output of querystring.parse(parsedURL);
 { first : "kevin", last : "smith" }
+```
+
+### querystring stringify
+
+```js
+const qs = querystring.stringify({
+  first: kevin,
+  last: smith,
+});
+// Returns "first=kevin&last=smith"
 ```
