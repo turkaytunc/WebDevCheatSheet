@@ -25,6 +25,15 @@ sass --watch app/sass:public/stylesheets
 }
 ```
 
+## Clamp width
+
+```scss
+.parent {
+  width: clamp(23ch, 50%, 46ch);
+  //width: clamp(2rem, 50vw, 3rem);
+}
+```
+
 ## Classic holy grail layout
 
 ```scss
