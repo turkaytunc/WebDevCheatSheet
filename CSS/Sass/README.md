@@ -25,6 +25,16 @@ sass --watch app/sass:public/stylesheets
 }
 ```
 
+## Grid stick footer
+
+```scss
+.wrapper {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+```
+
 ## Grid auto resize
 
 ```scss
