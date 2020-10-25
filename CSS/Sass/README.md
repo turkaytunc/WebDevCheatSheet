@@ -25,6 +25,15 @@ sass --watch app/sass:public/stylesheets
 }
 ```
 
+## Classic holy grail layout
+
+```scss
+.parent {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+}
+```
+
 ## Grid stick footer
 
 ```scss
