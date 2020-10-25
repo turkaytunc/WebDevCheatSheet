@@ -10,6 +10,21 @@ sass --watch input.scss output.css
 sass --watch app/sass:public/stylesheets
 ```
 
+## Flexbox Deconstructed Pancake
+
+```scss
+// flex: <flex-grow> <flex-shrink> <flex-basis>;
+// flex: 1 1 100px;
+
+.parent {
+  display: flex;
+}
+
+.child {
+  flex: 0 1 150px;
+}
+```
+
 ## Grid auto resize
 
 ```scss
