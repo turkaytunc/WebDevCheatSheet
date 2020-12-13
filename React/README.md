@@ -11,6 +11,7 @@
 - [Dependency Check in useEffect](#Dependency-Check-in-useEffect)
 - [Data fetch with hooks and async-await](#Data-fetch-with-hooks-and-async-await)
 - [Data fetch with hooks and axios with promises](#Data-fetch-with-hooks-and-axios-with-promises)
+- [useeffect empty dependency array lint error fix](#useeffect-empty-dependency-array-lint-error-fix)
 
 - [Redux](#Redux)
   - [Redux simple example](#Redux-simple-example)
@@ -18,7 +19,7 @@
 ## Use State
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export const StateHook = () => {
   const initialCount = 0;
@@ -41,18 +42,18 @@ export const StateHook = () => {
 ## useState with objects
 
 ```javascript
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 export const StateHook = () => {
   const [data, setData] = useState({
-    firstName: '',
-    lastName: '',
+    firstName: "",
+    lastName: "",
     age: 0,
   });
   return (
     <div>
       <form>
-        <label style={{ fontSize: '.7rem' }} htmlFor="firstName">
+        <label style={{ fontSize: ".7rem" }} htmlFor="firstName">
           FirstName
         </label>
         <input
@@ -61,7 +62,7 @@ export const StateHook = () => {
           name="firstName"
           onChange={(e) => setData({ ...data, firstName: e.target.value })}
         />
-        <label style={{ fontSize: '.7rem' }} htmlFor="lastName">
+        <label style={{ fontSize: ".7rem" }} htmlFor="lastName">
           LastName
         </label>
         <input
@@ -70,7 +71,7 @@ export const StateHook = () => {
           name="lastName"
           onChange={(e) => setData({ ...data, lastName: e.target.value })}
         />
-        <label style={{ fontSize: '.7rem' }} htmlFor="age">
+        <label style={{ fontSize: ".7rem" }} htmlFor="age">
           Age
         </label>
         <input
@@ -91,7 +92,7 @@ export const StateHook = () => {
 ## useEffect hook
 
 ```javascript
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 export const EffectHook = () => {
   const [count, setCount] = useState(0);
@@ -112,11 +113,11 @@ export const EffectHook = () => {
 ## Conditionally run effect hook
 
 ```javascript
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 export const EffectHook = () => {
   const [count, setCount] = useState(0);
-  const [username, setUsername] = useState('');
+  const [username, setUsername] = useState("");
 
   useEffect(() => {
     document.title = `Clicked ${count} times.`;
@@ -135,18 +136,18 @@ export const EffectHook = () => {
 ## call useEffect once at start
 
 ```javascript
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 export const EffectHook = () => {
   const [cursorPosition, setCursorPosition] = useState({ xPos: 0, yPos: 0 });
 
   const getMousePosition = (e) => {
     setCursorPosition({ ...cursorPosition, xPos: e.clientX, yPos: e.clientY });
-    console.log('mousemove called!');
+    console.log("mousemove called!");
   };
 
   useEffect(() => {
-    window.addEventListener('mousemove', getMousePosition);
+    window.addEventListener("mousemove", getMousePosition);
   }, []);
   return (
     <div>
@@ -161,21 +162,21 @@ export const EffectHook = () => {
 ## useEffect cleanup
 
 ```javascript
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 export const EffectHook = () => {
   const [cursorPosition, setCursorPosition] = useState({ xPos: 0, yPos: 0 });
 
   const getMousePosition = (e) => {
     setCursorPosition({ ...cursorPosition, xPos: e.clientX, yPos: e.clientY });
-    console.log('mousemove called!');
+    console.log("mousemove called!");
   };
 
   useEffect(() => {
-    window.addEventListener('mousemove', getMousePosition);
+    window.addEventListener("mousemove", getMousePosition);
 
     return () => {
-      window.removeEventListener('mousemove', getMousePosition);
+      window.removeEventListener("mousemove", getMousePosition);
     };
   }, []);
   return (
@@ -191,7 +192,7 @@ export const EffectHook = () => {
 ## Dependency Check in useEffect
 
 ```javascript
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 export const EffectHook = () => {
   const [count, setCount] = useState(0);
@@ -213,8 +214,8 @@ export const EffectHook = () => {
 ## Data fetch with hooks and async-await
 
 ```javascript
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export const EffectHook = () => {
   const [users, setUsers] = useState([]);
@@ -226,7 +227,7 @@ export const EffectHook = () => {
       );
       setUsers(response.data);
     } catch (error) {
-      console.log('something went wrong! \n error is : ', error);
+      console.log("something went wrong! \n error is : ", error);
     }
   }
 
@@ -253,8 +254,8 @@ export const EffectHook = () => {
 ## Data fetch with hooks and axios with promises
 
 ```javascript
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
 export const EffectHook = () => {
   const [users, setUsers] = useState([]);
@@ -281,13 +282,46 @@ export const EffectHook = () => {
 };
 ```
 
+### useeffect empty dependency array lint error fix
+
+- Use function as useEffect callback
+
+```js
+useEffect(fetchBusinesses, []);
+```
+
+- Declare function inside useEffect
+
+```js
+useEffect(() => {
+  function fetchBusinesses() {
+    ...
+  }
+  fetchBusinesses()
+}, [])
+```
+
+- Memoize with useCallback
+
+```js
+In this case, if you have dependencies in your function, you will have to include them in the useCallback dependencies array and this will trigger the useEffect again if the function's params change. Besides, it is a lot of boilerplate... So just pass the function directly to useEffect as in 1. useEffect(fetchBusinesses, []).
+
+const fetchBusinesses = useCallback(() => {
+  ...
+}, [])
+useEffect(() => {
+  fetchBusinesses()
+}, [fetchBusinesses])
+
+```
+
 ### Redux
 
 ### Redux simple example
 
 ```js
-const INCREMENT = 'INCREMENT';
-const DECREMENT = 'DECREMENT';
+const INCREMENT = "INCREMENT";
+const DECREMENT = "DECREMENT";
 
 const counterReducer = (state = 0, action) => {
   switch (action.type) {
