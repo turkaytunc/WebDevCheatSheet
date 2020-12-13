@@ -303,8 +303,9 @@ useEffect(() => {
 
 - Memoize with useCallback
 
-```js
 In this case, if you have dependencies in your function, you will have to include them in the useCallback dependencies array and this will trigger the useEffect again if the function's params change. Besides, it is a lot of boilerplate... So just pass the function directly to useEffect as in 1. useEffect(fetchBusinesses, []).
+
+```js
 
 const fetchBusinesses = useCallback(() => {
   ...
