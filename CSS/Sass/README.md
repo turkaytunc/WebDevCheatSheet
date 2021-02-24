@@ -289,3 +289,18 @@ $red-color: red;
   background-color: magenta;
 }
 ```
+
+## Attribute selector
+
+```scss
+
+[data-size="large"] {
+  padding: 2rem;
+  font-size: 125%;
+}
+// or using element, class, ...
+
+button[data-type="download"] { }
+.card[data-pad="extra"] { }
+
+```
